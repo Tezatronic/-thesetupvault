@@ -76,13 +76,21 @@ function buildPrompt(cluster, angle, siblingAngles, existingPosts) {
     ? `\nOTHER ARTICLES IN THIS SAME PRODUCT CLUSTER (do not target these angles or keywords — stay tightly focused on YOUR angle only, to avoid two pages on this site competing for the same search term):\n${siblingAngles.map(a => `- "${a.focus}" (covers: ${a.keywords.join(', ')})`).join('\n')}\nIf one of these has already been published (check the existing articles list above) and it's genuinely relevant, you may link to it once — but do not restate or re-cover its content here.\n`
     : '';
 
+  // CRITICAL: models will confidently invent plausible-sounding but false specs
+  // (weight capacity, dimensions, etc.) if simply told "use general typical specs."
+  // This block is a hard gate: either use ONLY real verified numbers, or use NO
+  // numbers at all. There is no middle ground where invented numbers are allowed.
+  const specsBlock = cluster.verifiedSpecs
+    ? `\nVERIFIED REAL SPECS FOR THIS PRODUCT (these are confirmed accurate — you may state these exact figures, and ONLY these, when making numeric claims):\n${Object.entries(cluster.verifiedSpecs).map(([k, v]) => `- ${k.replace(/_/g, ' ')}: ${v}`).join('\n')}\nDo NOT state any other specific numeric spec, capacity, weight, dimension, or figure about this product beyond what is listed above. If you want to mention a spec not listed here, describe it qualitatively instead (e.g. "sturdy," "compact," "lightweight") rather than inventing a number.\n`
+    : `\nNO VERIFIED SPECS ARE AVAILABLE FOR THIS PRODUCT YET. This means: DO NOT state any specific numeric weight capacity, dimension, weight, or spec figure anywhere in this article — even a "typical" or "roughly" estimated one. Describe qualities qualitatively instead (e.g. "sturdy," "compact," "widely compatible") rather than inventing a number that could be wrong.\n`;
+
   return `You are writing one SEO blog article for The Setup Vault, a home-office and desk-setup affiliate blog. The article must be genuinely useful, specific, and written in a natural, human voice.
 
 PRODUCT FOR THIS ARTICLE:
 - Display name: ${cluster.displayName}
 - Real product: ${cluster.realName}
 - Affiliate link: ${cluster.link}
-
+${specsBlock}
 YOUR SPECIFIC ANGLE FOR THIS ARTICLE (stay tightly focused on this — do not turn it into a generic product review):
 - Angle: ${angle.angle}
 - Focus: ${angle.focus}
@@ -107,8 +115,7 @@ REQUIREMENTS:
 - Output ONLY the raw markdown file content, starting with a YAML frontmatter block delimited by --- lines, with exactly these fields: title, description, pubDate (format: YYYY-MM-DD, use today's date). Do not include a slug field.
 - After the frontmatter, write the full article body in Markdown.
 - Naturally include a "## Who This Isn't For" or "## Potential Drawbacks" section that names 1-2 real limitations relevant to your angle — do not invent fake numbers, but general/typical specs and honest tradeoffs are expected.
-- Insert the real affiliate link at a natural buying moment using this exact format: [Check current price](${cluster.link}) — never use a placeholder link.
-- Use general, typical specs and mainstream consensus figures rather than inventing statistics.
+- Insert the exact same affiliate link, using this exact format: [Check current price](${cluster.link}) — a total of 4 to 5 separate times throughout the article, never a placeholder link. Place them at these natural points: (1) shortly after the opening answer, for readers who already know they want this, (2) after you cover the key factors/considerations section, (3) right after the main product recommendation/breakdown — this is the highest-intent placement, (4) right after the drawbacks/limitations section, for readers who wanted reassurance first, (5) once more near the very end of the article. Each instance should sit on its own line, not buried mid-sentence inside a paragraph.
 - Do not use any of these words or phrases anywhere in the article: ${BANNED_PHRASES.join(', ')}.
 - Do not use hypothetical-scenario openers like "Picture this" or "Imagine sitting at your desk."
 - Write like a knowledgeable person who actually uses home office gear, not like generic marketing copy.
@@ -170,6 +177,18 @@ function extractTitle(text) {
   return match[1].trim().replace(/^["']|["']$/g, '');
 }
 
+// Models don't reliably know the real current date. Never trust whatever date
+// Gemini wrote in the frontmatter — always overwrite it with the actual date.
+function forceRealPubDate(text) {
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  if (/pubDate:\s*.+/.test(text)) {
+    return text.replace(/pubDate:\s*.+/, `pubDate: ${today}`);
+  }
+  // Fallback: shouldn't happen since cleanOutput() already validated pubDate exists,
+  // but insert it right after the opening --- if somehow missing.
+  return text.replace(/^---\n/, `---\npubDate: ${today}\n`);
+}
+
 function slugify(title) {
   return title
     .toLowerCase()
@@ -182,7 +201,8 @@ async function main() {
   const existingPosts = getExistingPosts();
   const prompt = buildPrompt(cluster, angle, siblingAngles, existingPosts);
   const raw = await callGemini(prompt);
-  const cleaned = cleanOutput(raw);
+  const cleanedRaw = cleanOutput(raw);
+  const cleaned = forceRealPubDate(cleanedRaw);
   const title = extractTitle(cleaned);
   let slug = slugify(title);
 
