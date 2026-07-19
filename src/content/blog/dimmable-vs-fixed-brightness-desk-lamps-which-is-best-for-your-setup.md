@@ -1,5 +1,5 @@
 ---
-title: Dimmable vs. Fixed-Brightness Desk Lamps: Which is Best for Your Setup?
+title: "Dimmable vs. Fixed-Brightness Desk Lamps: Which is Best for Your Setup?"
 description: Compare dimmable vs. fixed-brightness desk lamps to find the right lighting for your home office. Learn why a gooseneck desk lamp with dimming controls is the superior choice.
 pubDate: 2026-07-18
 ---
