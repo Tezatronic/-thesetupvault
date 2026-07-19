@@ -32,7 +32,6 @@ function pickAngle() {
     }
   }
 
-  // All clusters fully covered — start a fresh pass over all of them
   if (!chosenCluster) {
     used = [];
     chosenCluster = clusters[0];
@@ -42,8 +41,6 @@ function pickAngle() {
   used.push(key(chosenCluster.cluster, chosenAngle.angle));
   fs.writeFileSync(USED_PATH, JSON.stringify(used, null, 2));
 
-  // Sibling angles already published in this same cluster — used for the
-  // cannibalization guard so the new article doesn't re-target their keywords.
   const siblingAngles = chosenCluster.angles.filter(a => a.angle !== chosenAngle.angle);
 
   return { cluster: chosenCluster, angle: chosenAngle, siblingAngles };
@@ -76,10 +73,6 @@ function buildPrompt(cluster, angle, siblingAngles, existingPosts) {
     ? `\nOTHER ARTICLES IN THIS SAME PRODUCT CLUSTER (do not target these angles or keywords — stay tightly focused on YOUR angle only, to avoid two pages on this site competing for the same search term):\n${siblingAngles.map(a => `- "${a.focus}" (covers: ${a.keywords.join(', ')})`).join('\n')}\nIf one of these has already been published (check the existing articles list above) and it's genuinely relevant, you may link to it once — but do not restate or re-cover its content here.\n`
     : '';
 
-  // CRITICAL: models will confidently invent plausible-sounding but false specs
-  // (weight capacity, dimensions, etc.) if simply told "use general typical specs."
-  // This block is a hard gate: either use ONLY real verified numbers, or use NO
-  // numbers at all. There is no middle ground where invented numbers are allowed.
   const specsBlock = cluster.verifiedSpecs
     ? `\nVERIFIED REAL SPECS FOR THIS PRODUCT (these are confirmed accurate — you may state these exact figures, and ONLY these, when making numeric claims):\n${Object.entries(cluster.verifiedSpecs).map(([k, v]) => `- ${k.replace(/_/g, ' ')}: ${v}`).join('\n')}\nDo NOT state any other specific numeric spec, capacity, weight, dimension, or figure about this product beyond what is listed above. If you want to mention a spec not listed here, describe it qualitatively instead (e.g. "sturdy," "compact," "lightweight") rather than inventing a number.\n`
     : `\nNO VERIFIED SPECS ARE AVAILABLE FOR THIS PRODUCT YET. This means: DO NOT state any specific numeric weight capacity, dimension, weight, or spec figure anywhere in this article — even a "typical" or "roughly" estimated one. Describe qualities qualitatively instead (e.g. "sturdy," "compact," "widely compatible") rather than inventing a number that could be wrong.\n`;
@@ -184,9 +177,32 @@ function forceRealPubDate(text) {
   if (/pubDate:\s*.+/.test(text)) {
     return text.replace(/pubDate:\s*.+/, `pubDate: ${today}`);
   }
-  // Fallback: shouldn't happen since cleanOutput() already validated pubDate exists,
-  // but insert it right after the opening --- if somehow missing.
   return text.replace(/^---\n/, `---\npubDate: ${today}\n`);
+}
+
+// A bare colon-space inside an unquoted YAML scalar breaks frontmatter parsing
+// (Astro's build fails the ENTIRE site on one bad file). Titles/descriptions
+// frequently contain colons ("X vs Y: Which One..."), so always force-quote
+// these two fields regardless of what Gemini output, rather than trust the
+// model to remember proper YAML escaping every time.
+function quoteFrontmatterFields(text) {
+  const parts = text.split('---');
+  let frontmatter = parts[1];
+
+  for (const field of ['title', 'description']) {
+    const re = new RegExp(`^${field}:\\s*(.+)$`, 'm');
+    frontmatter = frontmatter.replace(re, (match, value) => {
+      let v = value.trim();
+      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
+        return `${field}: ${v}`;
+      }
+      const escaped = v.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+      return `${field}: "${escaped}"`;
+    });
+  }
+
+  parts[1] = frontmatter;
+  return parts.join('---');
 }
 
 function slugify(title) {
@@ -202,7 +218,8 @@ async function main() {
   const prompt = buildPrompt(cluster, angle, siblingAngles, existingPosts);
   const raw = await callGemini(prompt);
   const cleanedRaw = cleanOutput(raw);
-  const cleaned = forceRealPubDate(cleanedRaw);
+  const dated = forceRealPubDate(cleanedRaw);
+  const cleaned = quoteFrontmatterFields(dated);
   const title = extractTitle(cleaned);
   let slug = slugify(title);
 
