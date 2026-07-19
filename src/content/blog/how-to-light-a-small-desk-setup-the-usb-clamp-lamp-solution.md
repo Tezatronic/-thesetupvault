@@ -1,5 +1,5 @@
 ---
-title: How to Light a Small Desk Setup: The USB Clamp Lamp Solution
+title: "How to Light a Small Desk Setup: The USB Clamp Lamp Solution"
 description: Maximizing space on a small desk is tough. Learn why a USB clamp desk lamp is the ultimate lighting solution for compact home offices.
 pubDate: 2026-07-19
 ---
