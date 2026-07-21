@@ -117,29 +117,64 @@ REQUIREMENTS:
 Output only the markdown file content, nothing else — no preamble, no code fences, no explanation.`;
 }
 
+const RETRYABLE_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
+const MAX_ATTEMPTS = 4;
+const BASE_DELAY_MS = 5000; // 5s, 10s, 20s backoff between attempts
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function callGemini(prompt) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error('GEMINI_API_KEY is not set');
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { maxOutputTokens: 8192, temperature: 0.4 }
-    })
-  });
 
-  if (!res.ok) {
+  let lastError;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    let res;
+    try {
+      res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { maxOutputTokens: 8192, temperature: 0.4 }
+        })
+      });
+    } catch (networkErr) {
+      lastError = new Error(`Gemini fetch failed: ${networkErr.message}`);
+      if (attempt < MAX_ATTEMPTS) {
+        const delay = BASE_DELAY_MS * 2 ** (attempt - 1);
+        console.warn(`Attempt ${attempt}/${MAX_ATTEMPTS} failed (network error). Retrying in ${delay / 1000}s...`);
+        await sleep(delay);
+        continue;
+      }
+      throw lastError;
+    }
+
+    if (res.ok) {
+      const data = await res.json();
+      const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!text) throw new Error('Gemini returned no text content');
+      return text;
+    }
+
     const errText = await res.text();
-    throw new Error(`Gemini API error ${res.status}: ${errText}`);
+    lastError = new Error(`Gemini API error ${res.status}: ${errText}`);
+
+    const isRetryable = RETRYABLE_STATUS_CODES.has(res.status);
+    if (!isRetryable || attempt === MAX_ATTEMPTS) {
+      throw lastError;
+    }
+
+    const delay = BASE_DELAY_MS * 2 ** (attempt - 1);
+    console.warn(`Attempt ${attempt}/${MAX_ATTEMPTS} failed (HTTP ${res.status}, retryable). Retrying in ${delay / 1000}s...`);
+    await sleep(delay);
   }
 
-  const data = await res.json();
-  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!text) throw new Error('Gemini returned no text content');
-  return text;
+  throw lastError;
 }
 
 function cleanOutput(raw) {
