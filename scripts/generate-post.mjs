@@ -148,7 +148,7 @@ async function callGemini(prompt) {
       lastError = new Error(`Gemini fetch failed: ${networkErr.message}`);
       if (attempt < MAX_ATTEMPTS) {
         const delay = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS);
-        console.warn(`Attempt ${attempt}/${MAX_ATTEMPTS} failed (network error). Retrying in ${delay / 1000}s...`);
+        console.warn(`Gemini attempt ${attempt}/${MAX_ATTEMPTS} failed (network error). Retrying in ${delay / 1000}s...`);
         await sleep(delay);
         continue;
       }
@@ -171,11 +171,61 @@ async function callGemini(prompt) {
     }
 
     const delay = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS);
-    console.warn(`Attempt ${attempt}/${MAX_ATTEMPTS} failed (HTTP ${res.status}, retryable). Retrying in ${delay / 1000}s...`);
+    console.warn(`Gemini attempt ${attempt}/${MAX_ATTEMPTS} failed (HTTP ${res.status}, retryable). Retrying in ${delay / 1000}s...`);
     await sleep(delay);
   }
 
   throw lastError;
+}
+
+// Fallback provider — only called if Gemini fails all MAX_ATTEMPTS retries.
+// Groq runs on its own hardware, fully independent of Google's infrastructure,
+// so a Gemini outage doesn't take this down too. Free tier, OpenAI-compatible API.
+async function callGroq(prompt) {
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) throw new Error('GROQ_API_KEY is not set');
+
+  const url = 'https://api.groq.com/openai/v1/chat/completions';
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      model: 'llama-3.3-70b-versatile',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 8192,
+      temperature: 0.4
+    })
+  });
+
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`Groq API error ${res.status}: ${errText}`);
+  }
+
+  const data = await res.json();
+  const text = data?.choices?.[0]?.message?.content;
+  if (!text) throw new Error('Groq returned no text content');
+  return text;
+}
+
+// Tries Gemini first (with its full retry logic). Only if Gemini fails
+// completely does this fall back to Groq as a last resort before giving up.
+async function callAI(prompt) {
+  try {
+    return await callGemini(prompt);
+  } catch (geminiErr) {
+    console.warn(`Gemini failed after all retries: ${geminiErr.message}`);
+    console.warn('Falling back to Groq...');
+    try {
+      return await callGroq(prompt);
+    } catch (groqErr) {
+      throw new Error(`Both providers failed. Gemini: ${geminiErr.message} | Groq: ${groqErr.message}`);
+    }
+  }
 }
 
 function cleanOutput(raw) {
@@ -207,7 +257,7 @@ function extractTitle(text) {
 }
 
 // Models don't reliably know the real current date. Never trust whatever date
-// Gemini wrote in the frontmatter — always overwrite it with the actual date.
+// the model wrote in the frontmatter — always overwrite it with the actual date.
 function forceRealPubDate(text) {
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
   if (/pubDate:\s*.+/.test(text)) {
@@ -219,8 +269,8 @@ function forceRealPubDate(text) {
 // A bare colon-space inside an unquoted YAML scalar breaks frontmatter parsing
 // (Astro's build fails the ENTIRE site on one bad file). Titles/descriptions
 // frequently contain colons ("X vs Y: Which One..."), so always force-quote
-// these two fields regardless of what Gemini output, rather than trust the
-// model to remember proper YAML escaping every time.
+// these two fields regardless of what the model output, rather than trust
+// the model to remember proper YAML escaping every time.
 function quoteFrontmatterFields(text) {
   const parts = text.split('---');
   let frontmatter = parts[1];
@@ -252,7 +302,7 @@ async function main() {
   const { cluster, angle, siblingAngles } = pickAngle();
   const existingPosts = getExistingPosts();
   const prompt = buildPrompt(cluster, angle, siblingAngles, existingPosts);
-  const raw = await callGemini(prompt);
+  const raw = await callAI(prompt);
   const cleanedRaw = cleanOutput(raw);
   const dated = forceRealPubDate(cleanedRaw);
   const cleaned = quoteFrontmatterFields(dated);
