@@ -118,7 +118,7 @@ Output only the markdown file content, nothing else — no preamble, no code fen
 }
 
 const RETRYABLE_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
-const MAX_ATTEMPTS = 9;
+const MAX_ATTEMPTS = 4;
 const BASE_DELAY_MS = 8000;
 const MAX_DELAY_MS = 60000; // cap each wait at 60s so retries don't balloon into an hours-long job
 
@@ -194,7 +194,7 @@ async function callGroq(prompt) {
       'Authorization': `Bearer ${apiKey}`
     },
     body: JSON.stringify({
-      model: 'llama-3.3-70b-versatile',
+      model: 'openai/gpt-oss-120b',
       messages: [{ role: 'user', content: prompt }],
       max_tokens: 8192,
       temperature: 0.4
