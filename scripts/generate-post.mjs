@@ -181,6 +181,8 @@ async function callGemini(prompt) {
 // Fallback provider — only called if Gemini fails all MAX_ATTEMPTS retries.
 // Groq runs on its own hardware, fully independent of Google's infrastructure,
 // so a Gemini outage doesn't take this down too. Free tier, OpenAI-compatible API.
+// NOTE: Groq's free tier caps at 8000 tokens/minute (prompt + response combined),
+// so max_tokens is kept modest here — the prompt itself is already long.
 async function callGroq(prompt) {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error('GROQ_API_KEY is not set');
@@ -196,7 +198,7 @@ async function callGroq(prompt) {
     body: JSON.stringify({
       model: 'openai/gpt-oss-120b',
       messages: [{ role: 'user', content: prompt }],
-      max_tokens: 8192,
+      max_tokens: 3000,
       temperature: 0.4
     })
   });
