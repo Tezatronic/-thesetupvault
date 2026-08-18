@@ -118,8 +118,9 @@ Output only the markdown file content, nothing else — no preamble, no code fen
 }
 
 const RETRYABLE_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
-const MAX_ATTEMPTS = 4;
-const BASE_DELAY_MS = 5000; // 5s, 10s, 20s backoff between attempts
+const MAX_ATTEMPTS = 9;
+const BASE_DELAY_MS = 8000;
+const MAX_DELAY_MS = 60000; // cap each wait at 60s so retries don't balloon into an hours-long job
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -146,7 +147,7 @@ async function callGemini(prompt) {
     } catch (networkErr) {
       lastError = new Error(`Gemini fetch failed: ${networkErr.message}`);
       if (attempt < MAX_ATTEMPTS) {
-        const delay = BASE_DELAY_MS * 2 ** (attempt - 1);
+        const delay = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS);
         console.warn(`Attempt ${attempt}/${MAX_ATTEMPTS} failed (network error). Retrying in ${delay / 1000}s...`);
         await sleep(delay);
         continue;
@@ -169,7 +170,7 @@ async function callGemini(prompt) {
       throw lastError;
     }
 
-    const delay = BASE_DELAY_MS * 2 ** (attempt - 1);
+    const delay = Math.min(BASE_DELAY_MS * 2 ** (attempt - 1), MAX_DELAY_MS);
     console.warn(`Attempt ${attempt}/${MAX_ATTEMPTS} failed (HTTP ${res.status}, retryable). Retrying in ${delay / 1000}s...`);
     await sleep(delay);
   }
