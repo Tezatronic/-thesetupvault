@@ -8,17 +8,38 @@
       {
         "angle": "buying-guide",
         "focus": "best adjustable laptop stand for a home office",
-        "keywords": ["adjustable laptop stand", "best laptop stand for desk", "ergonomic laptop stand"]
+        "keywords": [
+          "adjustable laptop stand",
+          "best laptop stand for desk",
+          "ergonomic laptop stand"
+        ]
       },
       {
         "angle": "comparison",
         "focus": "laptop stand vs laptop riser: which do you actually need",
-        "keywords": ["laptop stand vs riser", "portable laptop riser", "foldable laptop stand"]
+        "keywords": [
+          "laptop stand vs riser",
+          "portable laptop riser",
+          "foldable laptop stand"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "what to look for in a laptop stand for MacBook",
-        "keywords": ["laptop stand for MacBook", "aluminum laptop stand", "office desk accessories"]
+        "keywords": [
+          "laptop stand for MacBook",
+          "aluminum laptop stand",
+          "office desk accessories"
+        ]
+      },
+      {
+        "angle": "travel-use-case",
+        "focus": "best laptop stand for travel and commuting",
+        "keywords": [
+          "laptop stand for travel",
+          "portable folding laptop stand",
+          "laptop stand for commuting"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -39,17 +60,36 @@
       {
         "angle": "buying-guide",
         "focus": "best LED desk lamp for reading and studying",
-        "keywords": ["LED desk lamp", "desk lamp for reading/studying", "eye-caring desk light"]
+        "keywords": [
+          "LED desk lamp",
+          "desk lamp for reading/studying",
+          "eye-caring desk light"
+        ]
       },
       {
         "angle": "comparison",
         "focus": "dimmable vs fixed-brightness desk lamps",
-        "keywords": ["dimmable desk lamp", "gooseneck desk lamp"]
+        "keywords": [
+          "dimmable desk lamp",
+          "gooseneck desk lamp"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "USB desk lamp setups for small desks",
-        "keywords": ["USB desk lamp", "clamp desk lamp"]
+        "keywords": [
+          "USB desk lamp",
+          "clamp desk lamp"
+        ]
+      },
+      {
+        "angle": "eye-strain-comparison",
+        "focus": "does desk lamp color temperature actually affect eye strain",
+        "keywords": [
+          "eye strain desk lamp",
+          "color temperature desk lamp",
+          "blue light desk lamp"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -71,24 +111,41 @@
       {
         "angle": "buying-guide",
         "focus": "best reusable cable ties for desk cable management",
-        "keywords": ["reusable cable ties", "cable management ties"]
+        "keywords": [
+          "reusable cable ties",
+          "cable management ties"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "how to organize desk cables with adjustable cord straps",
-        "keywords": ["adjustable cord straps", "cord wrap organizer"]
+        "keywords": [
+          "adjustable cord straps",
+          "cord wrap organizer"
+        ]
       },
       {
         "angle": "comparison",
         "focus": "reusable hook-and-loop ties vs one-time zip ties",
-        "keywords": ["hook and loop cable ties"]
+        "keywords": [
+          "hook and loop cable ties"
+        ]
+      },
+      {
+        "angle": "standing-desk-use-case",
+        "focus": "cable management for standing and adjustable-height desks",
+        "keywords": [
+          "standing desk cable management",
+          "cable management for adjustable desk",
+          "cable slack for sit-stand desk"
+        ]
       }
     ],
     "verifiedSpecs": {
       "material": "Nylon",
       "length_options": "available in 6-inch or 8-inch lengths",
       "pack_size_options": "available in packs of 60, 126, or 210 pieces",
-      "style": "hook-and-loop (velcro-style), reusable and adjustable — no cutting or trimming needed"
+      "style": "hook-and-loop (velcro-style), reusable and adjustable \u2014 no cutting or trimming needed"
     }
   },
   {
@@ -100,12 +157,27 @@
       {
         "angle": "buying-guide",
         "focus": "best adjustable monitor stand for a home office",
-        "keywords": ["computer monitor stand", "adjustable monitor riser"]
+        "keywords": [
+          "computer monitor stand",
+          "adjustable monitor riser"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "is a monitor stand with storage worth it",
-        "keywords": ["monitor stand with storage", "desk monitor stand for office"]
+        "keywords": [
+          "monitor stand with storage",
+          "desk monitor stand for office"
+        ]
+      },
+      {
+        "angle": "vs-monitor-arm-comparison",
+        "focus": "monitor stand vs monitor arm: which fits your desk better",
+        "keywords": [
+          "monitor stand vs monitor arm",
+          "monitor riser vs arm",
+          "desk monitor arm alternative"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -124,12 +196,27 @@
       {
         "angle": "buying-guide",
         "focus": "best desk paper organizer for a home office",
-        "keywords": ["paper organizer with trays", "mesh desk file holder"]
+        "keywords": [
+          "paper organizer with trays",
+          "mesh desk file holder"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "letter tray organizer setups for paperwork",
-        "keywords": ["letter tray organizer", "paper sorter for office"]
+        "keywords": [
+          "letter tray organizer",
+          "paper sorter for office"
+        ]
+      },
+      {
+        "angle": "drawers-comparison",
+        "focus": "desk organizer with drawers vs an open letter tray",
+        "keywords": [
+          "desk organizer with drawers",
+          "mesh vs wood desk organizer",
+          "closed vs open desk organizer"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -148,12 +235,27 @@
       {
         "angle": "buying-guide",
         "focus": "best waterproof desk pad protector",
-        "keywords": ["desk pad protector", "waterproof desk mat"]
+        "keywords": [
+          "desk pad protector",
+          "waterproof desk mat"
+        ]
       },
       {
         "angle": "comparison",
         "focus": "PU leather desk pad vs a plain desk mat",
-        "keywords": ["PU leather desk pad", "non-slip desk mat"]
+        "keywords": [
+          "PU leather desk pad",
+          "non-slip desk mat"
+        ]
+      },
+      {
+        "angle": "sizing-use-case",
+        "focus": "what size desk pad you actually need for a dual-monitor setup",
+        "keywords": [
+          "desk pad size guide",
+          "desk pad size for dual monitors",
+          "oversized desk mat sizing"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -171,17 +273,34 @@
       {
         "angle": "buying-guide",
         "focus": "best powered USB hub for a laptop setup",
-        "keywords": ["powered USB hub", "USB 3.2 hub"]
+        "keywords": [
+          "powered USB hub",
+          "USB 3.2 hub"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "what to know about USB-C hubs with PD charging",
-        "keywords": ["USB C hub multiport", "USB hub with PD charging"]
+        "keywords": [
+          "USB C hub multiport",
+          "USB hub with PD charging"
+        ]
       },
       {
         "angle": "comparison",
         "focus": "aluminum vs plastic USB hubs for a desk setup",
-        "keywords": ["aluminum USB hub for laptop"]
+        "keywords": [
+          "aluminum USB hub for laptop"
+        ]
+      },
+      {
+        "angle": "port-count-use-case",
+        "focus": "how many ports you actually need in a USB hub",
+        "keywords": [
+          "usb hub port count guide",
+          "how many usb ports do i need",
+          "usb hub for multiple monitors"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -203,12 +322,27 @@
       {
         "angle": "buying-guide",
         "focus": "best 1080p webcam for Zoom and Teams calls",
-        "keywords": ["1080p webcam with microphone", "webcam for Zoom/Teams"]
+        "keywords": [
+          "1080p webcam with microphone",
+          "webcam for Zoom/Teams"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "does webcam field of view actually matter for video calls",
-        "keywords": ["webcam with wide FOV", "plug and play webcam"]
+        "keywords": [
+          "webcam with wide FOV",
+          "plug and play webcam"
+        ]
+      },
+      {
+        "angle": "vs-builtin-comparison",
+        "focus": "is an external webcam worth it over your laptop's built-in camera",
+        "keywords": [
+          "external webcam vs built-in camera",
+          "is an external webcam worth it",
+          "laptop camera vs external webcam"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -230,12 +364,27 @@
       {
         "angle": "buying-guide",
         "focus": "best wireless keyboard and mouse combo for the office",
-        "keywords": ["wireless keyboard and mouse combo", "2.4GHz wireless combo"]
+        "keywords": [
+          "wireless keyboard and mouse combo",
+          "2.4GHz wireless combo"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "silent wireless keyboards for shared workspaces",
-        "keywords": ["silent wireless keyboard", "adjustable DPI mouse"]
+        "keywords": [
+          "silent wireless keyboard",
+          "adjustable DPI mouse"
+        ]
+      },
+      {
+        "angle": "mechanical-vs-membrane-comparison",
+        "focus": "mechanical vs membrane wireless keyboards for office use",
+        "keywords": [
+          "mechanical vs membrane keyboard office",
+          "wireless mechanical keyboard for work",
+          "quiet mechanical keyboard office"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -255,12 +404,27 @@
       {
         "angle": "buying-guide",
         "focus": "best wireless charging mouse pad for a desk setup",
-        "keywords": ["wireless charging mouse pad", "fast wireless charging pad"]
+        "keywords": [
+          "wireless charging mouse pad",
+          "fast wireless charging pad"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "are XXL desk mats with wireless charging worth it",
-        "keywords": ["XXL desk mat with charging", "large gaming desk pad"]
+        "keywords": [
+          "XXL desk mat with charging",
+          "large gaming desk pad"
+        ]
+      },
+      {
+        "angle": "vs-stand-comparison",
+        "focus": "wireless charging pad vs a wireless charging stand",
+        "keywords": [
+          "wireless charging pad vs stand",
+          "qi charging pad vs dock",
+          "flat vs upright wireless charger"
+        ]
       }
     ],
     "verifiedSpecs": {
@@ -281,12 +445,27 @@
       {
         "angle": "buying-guide",
         "focus": "best rechargeable USB desk fan for summer",
-        "keywords": ["rechargeable USB desk fan", "battery powered desk fan"]
+        "keywords": [
+          "rechargeable USB desk fan",
+          "battery powered desk fan"
+        ]
       },
       {
         "angle": "use-case",
         "focus": "quiet desk fans for shared offices",
-        "keywords": ["quiet desk fan", "portable desk fan"]
+        "keywords": [
+          "quiet desk fan",
+          "portable desk fan"
+        ]
+      },
+      {
+        "angle": "vs-clip-fan-comparison",
+        "focus": "USB desk fan vs a clip-on or tower fan for a desk",
+        "keywords": [
+          "clip fan vs desk fan",
+          "usb fan vs tower fan for desk",
+          "desk fan vs clip fan for office"
+        ]
       }
     ],
     "verifiedSpecs": {
