@@ -1,0 +1,175 @@
+---
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_DESCRIPTION } from '../consts';
+import DeskGuideCover from '../assets/product-cover-desk-setup-guide.png';
+
+const products = [
+	{
+		title: 'The Ultimate Desk Setup & Cable Management Guide',
+		description:
+			'A short, practical PDF guide that walks you through exactly how to route your cables based on your desk size, monitor count, and cable load — with a diagram and checklist for your specific setup.',
+		price: '$10',
+		originalPrice: '$12.50',
+		url: 'https://whop.com/the-setup-vault/ultimate-desk-setup-cable-management-guide/',
+		cover: DeskGuideCover,
+	},
+];
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={`Products — The Setup Vault`} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 820px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 3em 1em;
+			}
+			.page-heading {
+				margin-bottom: 0.3em;
+			}
+			.page-sub {
+				color: rgb(var(--gray));
+				margin: 0 0 2em 0;
+			}
+			.product-list {
+				display: flex;
+				flex-direction: column;
+				gap: 1.25em;
+			}
+			.product-card {
+				display: flex;
+				gap: 1.5em;
+				align-items: center;
+				background: white;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 14px;
+				padding: 1.25em;
+				box-shadow: 0 2px 6px rgba(var(--gray), 12%);
+			}
+			.product-thumb {
+				flex-shrink: 0;
+				width: 110px;
+				height: 110px;
+				border-radius: 12px;
+				overflow: hidden;
+			}
+			.product-thumb img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+			.product-info {
+				flex: 1;
+				min-width: 0;
+			}
+			.product-info h2 {
+				font-size: 1.15em;
+				margin: 0 0 0.35em 0;
+			}
+			.product-info p {
+				font-size: 0.7em;
+				color: rgb(var(--gray-dark));
+				margin: 0;
+				line-height: 1.5;
+			}
+			.product-side {
+				flex-shrink: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				gap: 0.6em;
+			}
+			.price-row {
+				display: flex;
+				align-items: baseline;
+				gap: 0.5em;
+			}
+			.price {
+				font-size: 1.3em;
+				font-weight: 700;
+				color: rgb(var(--black));
+			}
+			.price-original {
+				font-size: 0.85em;
+				color: rgb(var(--gray));
+				text-decoration: line-through;
+			}
+			.get-it {
+				display: inline-block;
+				background: var(--accent);
+				color: white;
+				font-weight: 700;
+				text-decoration: none;
+				padding: 0.55em 1.3em;
+				border-radius: 8px;
+				font-size: 0.85em;
+				white-space: nowrap;
+				transition: background 0.2s ease;
+			}
+			.get-it:hover {
+				background: var(--accent-dark);
+			}
+			.more-soon {
+				margin-top: 2.5em;
+				padding: 1.5em;
+				border: 1px dashed rgb(var(--gray-light));
+				border-radius: 14px;
+				text-align: center;
+				color: rgb(var(--gray));
+				font-size: 0.85em;
+			}
+			@media (max-width: 640px) {
+				.product-card {
+					flex-wrap: wrap;
+				}
+				.product-side {
+					width: 100%;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1 class="page-heading">Products</h1>
+			<p class="page-sub">Guides made by The Setup Vault — no affiliate links, just our own work.</p>
+
+			<div class="product-list">
+				{
+					products.map((p) => (
+						<div class="product-card">
+							<div class="product-thumb">
+								<Image src={p.cover} width={220} height={220} alt="" />
+							</div>
+							<div class="product-info">
+								<h2>{p.title}</h2>
+								<p>{p.description}</p>
+							</div>
+							<div class="product-side">
+								<div class="price-row">
+									<span class="price">{p.price}</span>
+									{p.originalPrice && <span class="price-original">{p.originalPrice}</span>}
+								</div>
+								<a class="get-it" href={p.url} target="_blank" rel="noopener">
+									Get it
+								</a>
+							</div>
+						</div>
+					))
+				}
+			</div>
+
+			<div class="more-soon">More guides are in the works — check back here for what's next.</div>
+		</main>
+		<Footer />
+	</body>
+</html>
