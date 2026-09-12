@@ -14,9 +14,18 @@ const BANNED_PHRASES = [
 // Depth-first cluster picking: finish all angles of the current cluster
 // (in file order) before moving to the next cluster. This builds topical
 // authority instead of spreading one-article-per-product forever.
+//
+// IMPORTANT: used-angles.json is a PERMANENT record of every cluster:angle
+// ever published, never reset. If every slot in products.json has already
+// been used, that means there is no unpublished topic left to write about —
+// generating one anyway would just be a fresh duplicate of an existing page
+// (this is exactly what caused 138 posts across only 26 real topics before).
+// In that case pickAngle() returns null and main() stops cleanly instead of
+// manufacturing a duplicate. The fix for a null return is to add more
+// products/angles to products.json, not to let this function repeat itself.
 function pickAngle() {
   const clusters = JSON.parse(fs.readFileSync(PRODUCTS_PATH, 'utf8'));
-  let used = JSON.parse(fs.readFileSync(USED_PATH, 'utf8'));
+  const used = JSON.parse(fs.readFileSync(USED_PATH, 'utf8'));
 
   const key = (clusterId, angle) => `${clusterId}:${angle}`;
 
@@ -33,9 +42,7 @@ function pickAngle() {
   }
 
   if (!chosenCluster) {
-    used = [];
-    chosenCluster = clusters[0];
-    chosenAngle = clusters[0].angles[0];
+    return null;
   }
 
   used.push(key(chosenCluster.cluster, chosenAngle.angle));
@@ -301,7 +308,19 @@ function slugify(title) {
 }
 
 async function main() {
-  const { cluster, angle, siblingAngles } = pickAngle();
+  const picked = pickAngle();
+
+  if (!picked) {
+    console.log(
+      'All cluster/angle slots in products.json have already been published — ' +
+      'nothing left to write without duplicating an existing article. ' +
+      'Add new products or new angles to scripts/products.json to continue. ' +
+      'No post was written this run.'
+    );
+    return;
+  }
+
+  const { cluster, angle, siblingAngles } = picked;
   const existingPosts = getExistingPosts();
   const prompt = buildPrompt(cluster, angle, siblingAngles, existingPosts);
   const raw = await callAI(prompt);
