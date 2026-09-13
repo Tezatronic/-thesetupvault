@@ -27,5 +27,6 @@
   "mini-desktop-fan:use-case",
   "laptop-stand:travel-use-case",
   "desk-lamp:eye-strain-comparison",
-  "cable-organizer:standing-desk-use-case"
+  "cable-organizer:standing-desk-use-case",
+  "monitor-stand:vs-monitor-arm-comparison"
 ]
