@@ -34,5 +34,6 @@
   "usb-hub:port-count-use-case",
   "webcam:vs-builtin-comparison",
   "keyboard-mouse-combo:mechanical-vs-membrane-comparison",
-  "wireless-charger-pad:vs-stand-comparison"
+  "wireless-charger-pad:vs-stand-comparison",
+  "mini-desktop-fan:vs-clip-fan-comparison"
 ]
