@@ -33,5 +33,6 @@
   "desk-pad:sizing-use-case",
   "usb-hub:port-count-use-case",
   "webcam:vs-builtin-comparison",
-  "keyboard-mouse-combo:mechanical-vs-membrane-comparison"
+  "keyboard-mouse-combo:mechanical-vs-membrane-comparison",
+  "wireless-charger-pad:vs-stand-comparison"
 ]
