@@ -5,16 +5,27 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_DESCRIPTION } from '../consts';
 import DeskGuideCover from '../assets/product-cover-desk-setup-guide.png';
+import PlannerCover from '../assets/product-cover-desk-setup-planner.png';
 
 const products = [
 	{
 		title: 'The Ultimate Desk Setup & Cable Management Guide',
 		description:
-			'A short, practical PDF guide that walks you through exactly how to route your cables based on your desk size, monitor count, and cable load — with a diagram and checklist for your specific setup.',
+			'A short, practical PDF guide for getting your cables under control. It walks you through picking the setup profile that matches your desk — Minimalist, Dual-Screen Standard, Power User, or Hybrid Worker — then gives you that profile\'s cable-routing plan and checklist.',
+		audience: 'Best for: fixing cable clutter on the desk you already have.',
 		price: '$10',
 		originalPrice: '$12.50',
 		url: 'https://whop.com/the-setup-vault/ultimate-desk-setup-cable-management-guide/',
 		cover: DeskGuideCover,
+	},
+	{
+		title: 'The Complete Desk Setup Planner',
+		description:
+			'A 34-page planning workbook for figuring out your whole workspace before you buy anything else. Diagnose what\'s not working, measure your space, plan monitor and cable placement, organize what you already have, and work out what\'s actually worth upgrading first.',
+		audience: 'Best for: planning or reworking your whole workspace before you spend another dollar.',
+		price: '$19',
+		url: 'https://whop.com/the-setup-vault/the-complete-desk-setup-planner/',
+		cover: PlannerCover,
 	},
 ];
 ---
@@ -78,6 +89,12 @@ const products = [
 				margin: 0;
 				line-height: 1.5;
 			}
+			.product-audience {
+				font-size: 0.7em;
+				font-weight: 700;
+				color: rgb(var(--accent));
+				margin: 0.5em 0 0 0;
+			}
 			.product-side {
 				flex-shrink: 0;
 				display: flex;
@@ -115,14 +132,30 @@ const products = [
 			.get-it:hover {
 				background: var(--accent-dark);
 			}
-			.more-soon {
+			.buying-guide {
 				margin-top: 2.5em;
-				padding: 1.5em;
+				padding: 1.5em 1.75em;
 				border: 1px dashed rgb(var(--gray-light));
 				border-radius: 14px;
-				text-align: center;
-				color: rgb(var(--gray));
+				color: rgb(var(--gray-dark));
 				font-size: 0.85em;
+			}
+			.buying-guide strong {
+				display: block;
+				margin-bottom: 0.6em;
+				color: rgb(var(--black));
+				font-size: 1.05em;
+			}
+			.buying-guide ul {
+				margin: 0;
+				padding-left: 1.2em;
+			}
+			.buying-guide li {
+				margin-bottom: 0.4em;
+				line-height: 1.5;
+			}
+			.buying-guide li:last-child {
+				margin-bottom: 0;
 			}
 			@media (max-width: 640px) {
 				.product-card {
@@ -153,6 +186,7 @@ const products = [
 							<div class="product-info">
 								<h2>{p.title}</h2>
 								<p>{p.description}</p>
+								<p class="product-audience">{p.audience}</p>
 							</div>
 							<div class="product-side">
 								<div class="price-row">
@@ -168,7 +202,14 @@ const products = [
 				}
 			</div>
 
-			<div class="more-soon">More guides are in the works — check back here for what's next.</div>
+			<div class="buying-guide">
+				<strong>Not sure which one?</strong>
+				<ul>
+					<li>Need to fix cable clutter on the desk you already have → the Cable Management Guide.</li>
+					<li>Planning or reworking the whole workspace before you buy anything else → the Desk Setup Planner.</li>
+					<li>Doing both → each one solves a different part of the problem, so use whichever matches what you're working on right now.</li>
+				</ul>
+			</div>
 		</main>
 		<Footer />
 	</body>
