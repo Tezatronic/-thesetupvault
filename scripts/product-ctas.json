@@ -2,37 +2,37 @@
   "cable-organizer": {
     "product": "product-1",
     "name": "The Ultimate Desk Setup & Cable Management Guide",
-    "url": "https://whop.com/the-setup-vault/ultimate-desk-setup-cable-management-guide/",
+    "url": "/go/cable-guide/",
     "hook": "picking the setup profile that matches their situation (minimalist, dual-screen, power user, or hybrid) and following that profile's cable-routing plan and checklist"
   },
   "laptop-stand": {
     "product": "product-2",
     "name": "The Complete Desk Setup Planner",
-    "url": "https://whop.com/the-setup-vault/the-complete-desk-setup-planner/",
+    "url": "/go/desk-planner/",
     "hook": "planning the whole workspace layout before buying any more individual pieces"
   },
   "monitor-stand": {
     "product": "product-2",
     "name": "The Complete Desk Setup Planner",
-    "url": "https://whop.com/the-setup-vault/the-complete-desk-setup-planner/",
+    "url": "/go/desk-planner/",
     "hook": "planning monitor and screen placement as part of a full desk layout, not as a one-off purchase"
   },
   "desk-lamp": {
     "product": "product-2",
     "name": "The Complete Desk Setup Planner",
-    "url": "https://whop.com/the-setup-vault/the-complete-desk-setup-planner/",
+    "url": "/go/desk-planner/",
     "hook": "planning lighting placement alongside the rest of the desk layout rather than adding it as an afterthought"
   },
   "desk-organizer": {
     "product": "product-2",
     "name": "The Complete Desk Setup Planner",
-    "url": "https://whop.com/the-setup-vault/the-complete-desk-setup-planner/",
+    "url": "/go/desk-planner/",
     "hook": "planning desk organization and storage as part of the full workspace layout"
   },
   "desk-pad": {
     "product": "product-2",
     "name": "The Complete Desk Setup Planner",
-    "url": "https://whop.com/the-setup-vault/the-complete-desk-setup-planner/",
+    "url": "/go/desk-planner/",
     "hook": "planning desk surface layout (monitor count, keyboard/mouse zone, cable paths) before picking accessories"
   }
 }

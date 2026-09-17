@@ -1,0 +1,74 @@
+---
+// Tracked outbound redirect routes for the two owned products.
+// Vercel Web Analytics (added in BaseHead) records a normal pageview
+// for this static page before the browser is sent on to Whop, giving
+// a free, no-custom-events proxy for "owned-product interest" per
+// product on the Hobby plan (Stage E).
+import BaseHead from '../../components/BaseHead.astro';
+
+interface Target {
+	title: string;
+	url: string;
+}
+
+export function getStaticPaths() {
+	const targets: Record<string, Target> = {
+		'cable-guide': {
+			title: 'The Ultimate Desk Setup & Cable Management Guide',
+			url: 'https://whop.com/the-setup-vault/ultimate-desk-setup-cable-management-guide/',
+		},
+		'desk-planner': {
+			title: 'The Complete Desk Setup Planner',
+			url: 'https://whop.com/the-setup-vault/the-complete-desk-setup-planner/',
+		},
+	};
+
+	return Object.entries(targets).map(([slug, target]) => ({
+		params: { slug },
+		props: { target },
+	}));
+}
+
+const { target } = Astro.props as { target: Target };
+---
+
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Redirecting… — The Setup Vault`}
+			description={`Redirecting to ${target.title} on Whop.`}
+		/>
+		<!-- No-JS fallback: still redirects, just without a tracked pageview -->
+		<noscript>
+			<meta http-equiv="refresh" content={`0;url=${target.url}`} />
+		</noscript>
+		<style>
+			body {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 60vh;
+				font-family: system-ui, sans-serif;
+				color: rgb(var(--gray-dark));
+				text-align: center;
+				padding: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			Taking you to {target.title}…<br />
+			<a href={target.url}>Continue if you're not redirected automatically.</a>
+		</p>
+		<script define:vars={{ url: target.url }}>
+			// Small delay so the Vercel Analytics pageview beacon fired by
+			// BaseHead has time to be sent (it uses sendBeacon/fetch with
+			// keepalive, which survives navigation, but we still give it a
+			// short head start rather than assuming an instant redirect
+			// is reliably measurable).
+			setTimeout(() => {
+				window.location.replace(url);
+			}, 200);
+		</script>
+	</body>
+</html>
