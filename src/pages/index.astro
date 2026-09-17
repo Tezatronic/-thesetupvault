@@ -9,32 +9,78 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.paths {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5em;
+				margin: 2em 0;
+			}
+			.path {
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 14px;
+				padding: 1.5em;
+			}
+			.path h2 {
+				font-size: 1.3em;
+				margin-bottom: 0.4em;
+			}
+			.path p {
+				margin-bottom: 0.75em;
+			}
+			.path a.cta {
+				display: inline-block;
+				background: var(--accent);
+				color: white;
+				font-weight: 700;
+				text-decoration: none;
+				padding: 0.6em 1.4em;
+				border-radius: 8px;
+				transition: background 0.2s ease;
+			}
+			.path a.cta:hover {
+				background: var(--accent-dark);
+				color: white;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>The Setup Vault: Home Office Setup Guides & Desk Accessories</h1>
+			<h1>Plan a Workspace That Works For You — Before You Spend Another Dollar</h1>
 			<p>
-				The Setup Vault is a home office resource built around one goal: helping you pick the
-				right desk accessories the first time, without wading through generic, padded-out
-				reviews. We cover the practical gear that makes a home office actually work — laptop
-				stands, desk lamps, monitor stands, cable organizers, desk pads, USB hubs, webcams,
-				wireless keyboard and mouse combos, wireless charging pads, and desk fans.
+				The Setup Vault helps you make better decisions about your home office, not just buy
+				more stuff for it. We do that two ways: free guides that answer specific setup
+				questions, and our own planning tools for organizing a workspace from the ground up.
 			</p>
+
+			<div class="paths">
+				<div class="path">
+					<h2>Guides</h2>
+					<p>
+						Practical answers to specific desk-setup questions — cable management, monitor
+						and laptop positioning, lighting, organization, and more — so you know what
+						actually matters before you buy anything.
+					</p>
+					<a class="cta" href="/blog">Browse all guides →</a>
+				</div>
+				<div class="path">
+					<h2>Our Own Tools</h2>
+					<p>
+						If you're planning or reorganizing your whole workspace rather than fixing one
+						thing, our own guides walk you through that process end to end.
+					</p>
+					<a class="cta" href="/products">See our products →</a>
+				</div>
+			</div>
+
 			<p>
-				Every guide is built around a specific buying question — not "here's a product," but
-				"here's what to look for, what the tradeoffs are, and who this actually isn't for."
-				Whether you're setting up a permanent home office desk setup or upgrading one piece at
-				a time, our goal is to save you the research time.
-			</p>
-			<p>
-				<a href="/blog">Browse all our home office and desk setup guides →</a>
-			</p>
-			<p>
-				Learn more about how we choose what to recommend on our
-				<a href="/about">About & Affiliate Disclosure page</a>.
+				Where it's genuinely useful, our guides also point to specific products on Amazon.
+				That's supporting monetization, not the reason this site exists — full disclosure is
+				on our <a href="/about">About & Affiliate Disclosure page</a>.
 			</p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
