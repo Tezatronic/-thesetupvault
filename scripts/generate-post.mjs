@@ -4,6 +4,18 @@ import path from 'node:path';
 const PRODUCTS_PATH = path.join('scripts', 'products.json');
 const USED_PATH = path.join('scripts', 'used-angles.json');
 const BLOG_DIR = path.join('src', 'content', 'blog');
+const PRODUCT_CTAS_PATH = path.join('scripts', 'product-ctas.json');
+
+// Data-driven cluster -> owned-product CTA mapping (Stage B). A cluster
+// with no entry in product-ctas.json is treated as "Accessories" — Amazon
+// affiliate CTAs only, no owned-product CTA. Adding a future Product #3 is
+// a matter of adding cluster keys to product-ctas.json, not editing this
+// script or buildPrompt().
+function getProductCta(clusterId) {
+  if (!fs.existsSync(PRODUCT_CTAS_PATH)) return null;
+  const map = JSON.parse(fs.readFileSync(PRODUCT_CTAS_PATH, 'utf8'));
+  return map[clusterId] || null;
+}
 
 const BANNED_PHRASES = [
   'revolutionary', 'game-changing', 'must-have', 'testament to', 'delve',
@@ -69,7 +81,7 @@ function getExistingPosts() {
   return posts.slice(-25).reverse();
 }
 
-function buildPrompt(cluster, angle, siblingAngles, existingPosts) {
+function buildPrompt(cluster, angle, siblingAngles, existingPosts, productCta) {
   const keywordList = angle.keywords.join(', ');
 
   const internalLinksBlock = existingPosts.length > 0
@@ -79,6 +91,10 @@ function buildPrompt(cluster, angle, siblingAngles, existingPosts) {
   const cannibalizationBlock = siblingAngles.length > 0
     ? `\nOTHER ARTICLES IN THIS SAME PRODUCT CLUSTER (do not target these angles or keywords — stay tightly focused on YOUR angle only, to avoid two pages on this site competing for the same search term):\n${siblingAngles.map(a => `- "${a.focus}" (covers: ${a.keywords.join(', ')})`).join('\n')}\nIf one of these has already been published (check the existing articles list above) and it's genuinely relevant, you may link to it once — but do not restate or re-cover its content here.\n`
     : '';
+
+  const productCtaBlock = productCta
+    ? `- Additionally, include exactly ONE mention of our own product, "${productCta.name}" (${productCta.url}), framed as the logical next step for a reader who wants to go further than this one article — specifically around ${productCta.hook}. This is the PRIMARY CTA of the article, more prominent in framing than the Amazon links, but it must read as a genuine, specific, non-pushy next step, not an ad. Do not use hyped or ad-like language ("must-have," "game-changing," "don't miss out"). Solve the reader's actual question from this article first — the product mention should feel like the natural continuation once that's done, not an interruption. Place it wherever it fits most naturally given how this specific article's structure unfolds (this will vary article to article — do not force it into a fixed position like "right after the intro" every time). Use the exact link format: [descriptive link text tied to ${productCta.hook}](${productCta.url}), on its own line.`
+    : `- This article's product category does not have a matching owned-product guide. Do not invent or reference an owned product for this article — Amazon affiliate links (per the rule above) are the only monetization link in this article.`;
 
   const specsBlock = cluster.verifiedSpecs
     ? `\nVERIFIED REAL SPECS FOR THIS PRODUCT (these are confirmed accurate — you may state these exact figures, and ONLY these, when making numeric claims):\n${Object.entries(cluster.verifiedSpecs).map(([k, v]) => `- ${k.replace(/_/g, ' ')}: ${v}`).join('\n')}\nDo NOT state any other specific numeric spec, capacity, weight, dimension, or figure about this product beyond what is listed above. If you want to mention a spec not listed here, describe it qualitatively instead (e.g. "sturdy," "compact," "lightweight") rather than inventing a number.\n`
@@ -115,7 +131,8 @@ REQUIREMENTS:
 - Output ONLY the raw markdown file content, starting with a YAML frontmatter block delimited by --- lines, with exactly these fields: title, description, pubDate (format: YYYY-MM-DD, use today's date). Do not include a slug field.
 - After the frontmatter, write the full article body in Markdown.
 - Naturally include a "## Who This Isn't For" or "## Potential Drawbacks" section that names 1-2 real limitations relevant to your angle — do not invent fake numbers, but general/typical specs and honest tradeoffs are expected.
-- Insert the exact same affiliate link, using this exact format: [Check current price](${cluster.link}) — a total of 4 to 5 separate times throughout the article, never a placeholder link. Place them at these natural points: (1) shortly after the opening answer, for readers who already know they want this, (2) after you cover the key factors/considerations section, (3) right after the main product recommendation/breakdown — this is the highest-intent placement, (4) right after the drawbacks/limitations section, for readers who wanted reassurance first, (5) once more near the very end of the article. Each instance should sit on its own line, not buried mid-sentence inside a paragraph.
+- Insert the exact same affiliate link, using this exact format: [Check current price](${cluster.link}) — a MAXIMUM of 2 separate times throughout the article, never a placeholder link, and never more than 2. Amazon is supporting monetization here, not the primary focus of the article. Place one instance at the highest-intent point (right after the main product recommendation/breakdown) and, if it fits naturally, one more near the very end. Each instance should sit on its own line, not buried mid-sentence inside a paragraph. If only one placement genuinely fits the article's flow, use only one — do not force a second just to hit a quota.
+${productCtaBlock}
 - Do not use any of these words or phrases anywhere in the article: ${BANNED_PHRASES.join(', ')}.
 - Do not use hypothetical-scenario openers like "Picture this" or "Imagine sitting at your desk."
 - Write like a knowledgeable person who actually uses home office gear, not like generic marketing copy.
@@ -322,7 +339,8 @@ async function main() {
 
   const { cluster, angle, siblingAngles } = picked;
   const existingPosts = getExistingPosts();
-  const prompt = buildPrompt(cluster, angle, siblingAngles, existingPosts);
+  const productCta = getProductCta(cluster.cluster);
+  const prompt = buildPrompt(cluster, angle, siblingAngles, existingPosts, productCta);
   const raw = await callAI(prompt);
   const cleanedRaw = cleanOutput(raw);
   const dated = forceRealPubDate(cleanedRaw);
@@ -339,7 +357,10 @@ async function main() {
   }
 
   fs.writeFileSync(filePath, cleaned);
-  console.log(`Wrote new post: ${filePath} (cluster: ${cluster.cluster}, angle: ${angle.angle})`);
+  console.log(
+    `Wrote new post: ${filePath} (cluster: ${cluster.cluster}, angle: ${angle.angle}, ` +
+    `productCta: ${productCta ? productCta.product : 'none (accessories/affiliate-only)'})`
+  );
 }
 
 main().catch(err => {
