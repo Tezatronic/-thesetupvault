@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_DESCRIPTION } from '../consts';
 import DeskGuideCover from '../assets/product-cover-desk-setup-guide.png';
 import PlannerCover from '../assets/product-cover-desk-setup-planner.png';
+import ChecklistCapture from '../components/ChecklistCapture.astro';
 
 const products = [
 	{
@@ -210,6 +211,8 @@ const products = [
 					<li>Doing both → each one solves a different part of the problem, so use whichever matches what you're working on right now.</li>
 				</ul>
 			</div>
+
+			<ChecklistCapture />
 		</main>
 		<Footer />
 	</body>

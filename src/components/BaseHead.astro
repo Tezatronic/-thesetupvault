@@ -35,6 +35,21 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="google-site-verification" content="MQb7ezIa4KIq3ak7SqXSiR1u_Rzqll8MmnxYwdU2sJ8" />
 <Font cssVariable="--font-atkinson" preload />
 <Analytics />
+<script type="text/javascript" define:vars={{ brandId: '6aae989b71f964d8447695bb' }}>
+	// Omnisend main snippet — required for the embedded checklist signup form
+	// and its "already subscribed" / success states to work anywhere on the site.
+	window.omnisend = window.omnisend || [];
+	omnisend.push(['brandID', brandId]);
+	omnisend.push(['track', '$pageViewed']);
+	(function () {
+		var e = document.createElement('script');
+		e.type = 'text/javascript';
+		e.async = true;
+		e.src = 'https://omnisnippet1.com/inshop/launcher-v2.js';
+		var t = document.getElementsByTagName('script')[0];
+		t.parentNode.insertBefore(e, t);
+	})();
+</script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

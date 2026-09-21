@@ -5,6 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import ChecklistCapture from '../components/ChecklistCapture.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -81,6 +82,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<strong>Disclosure:</strong> This post contains affiliate links. If you make a purchase through one of these links, we may earn a commission at no additional cost to you.
 				</p>
 				<slot />
+				<ChecklistCapture />
 				</div>
 			</article>
 		</main>
