@@ -6,6 +6,28 @@ const USED_PATH = path.join('scripts', 'used-angles.json');
 const BLOG_DIR = path.join('src', 'content', 'blog');
 const PRODUCT_CTAS_PATH = path.join('scripts', 'product-ctas.json');
 
+// Dynamic-angle-generation state (added to replace the finite hand-written
+// angle pool once it's exhausted). products.json/its 11 clusters stay the
+// taxonomy of record; these files hold angles generated at runtime.
+const DYNAMIC_ANGLES_PATH = path.join('scripts', 'dynamic-angles.json'); // { clusterId: [angleObj, ...] }
+const DYNAMIC_POINTER_PATH = path.join('scripts', 'dynamic-pointer.json'); // { nextClusterIndex: N }
+const DYNAMIC_LOG_PATH = path.join('scripts', 'dynamic-angle-log.jsonl'); // audit trail, one JSON line per attempt
+
+function readJson(filePath, fallback) {
+  if (!fs.existsSync(filePath)) return fallback;
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+function writeJson(filePath, value) {
+  fs.writeFileSync(filePath, JSON.stringify(value, null, 2) + '\n');
+}
+
+function logDynamicEvent(entry) {
+  const line = JSON.stringify({ timestamp: new Date().toISOString(), ...entry });
+  fs.appendFileSync(DYNAMIC_LOG_PATH, line + '\n');
+  console.log(`[dynamic-angle] ${line}`);
+}
+
 // Data-driven cluster -> owned-product CTA mapping (Stage B). A cluster
 // with no entry in product-ctas.json is treated as "Accessories" — Amazon
 // affiliate CTAs only, no owned-product CTA. Adding a future Product #3 is
@@ -23,46 +45,230 @@ const BANNED_PHRASES = [
   'in conclusion', "it's important to note", 'imagine sitting at your desk'
 ];
 
+const STOPWORDS = new Set([
+  'the', 'a', 'an', 'for', 'and', 'or', 'to', 'of', 'in', 'on', 'with', 'vs',
+  'your', 'you', 'is', 'are', 'best', 'guide', 'how', 'what', 'which', 'do',
+  'does', 'it', 'this', 'that', 'at', 'desk', 'setup', 'home', 'office'
+]);
+
+function tokenize(text) {
+  return new Set(
+    String(text)
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(w => w.length > 2 && !STOPWORDS.has(w))
+  );
+}
+
+function jaccardSimilarity(setA, setB) {
+  if (setA.size === 0 || setB.size === 0) return 0;
+  let intersection = 0;
+  for (const w of setA) if (setB.has(w)) intersection++;
+  const union = setA.size + setB.size - intersection;
+  return union === 0 ? 0 : intersection / union;
+}
+
+// "Deliberately narrow" cluster-agnostic wording (e.g. "buying guide",
+// "comparison") is intentionally excluded from STOPWORDS-adjacent scope here
+// because it's still meaningful within a cluster's own angle set. Threshold
+// tuned conservatively (favor false rejections over false acceptances,
+// since a rejected angle just triggers a cheap retry, while an accepted
+// duplicate becomes a live duplicate-content page).
+const SIMILARITY_REJECT_THRESHOLD = 0.34;
+
+function findTooSimilar(candidateAngle, existingPosts, knownAnglesForCluster) {
+  const candidateTokens = tokenize(
+    `${candidateAngle.angle} ${candidateAngle.focus} ${(candidateAngle.keywords || []).join(' ')}`
+  );
+
+  for (const post of existingPosts) {
+    const sim = jaccardSimilarity(candidateTokens, tokenize(post.title));
+    if (sim >= SIMILARITY_REJECT_THRESHOLD) {
+      return { against: 'published article', title: post.title, similarity: sim.toFixed(2) };
+    }
+  }
+
+  for (const known of knownAnglesForCluster) {
+    const knownTokens = tokenize(`${known.angle} ${known.focus} ${(known.keywords || []).join(' ')}`);
+    const sim = jaccardSimilarity(candidateTokens, knownTokens);
+    if (sim >= SIMILARITY_REJECT_THRESHOLD) {
+      return { against: 'existing angle', title: known.focus, similarity: sim.toFixed(2) };
+    }
+  }
+
+  return null;
+}
+
+function getAllKnownAnglesForCluster(cluster, dynamicAngles) {
+  const dynamicForCluster = dynamicAngles[cluster.cluster] || [];
+  return [...cluster.angles, ...dynamicForCluster];
+}
+
+function extractJsonObject(raw) {
+  let text = raw.trim();
+  text = text.replace(/^```(?:json)?\n/, '').replace(/\n```$/, '').trim();
+  const start = text.indexOf('{');
+  const end = text.lastIndexOf('}');
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error('No JSON object found in dynamic-angle generation response');
+  }
+  return JSON.parse(text.slice(start, end + 1));
+}
+
+function buildAngleGenPrompt(cluster, knownAngles, existingPosts, rejectionFeedback) {
+  const knownAnglesBlock = knownAngles.length > 0
+    ? knownAngles.map(a => `- "${a.angle}": ${a.focus} (keywords: ${(a.keywords || []).join(', ')})`).join('\n')
+    : '(none yet)';
+
+  const existingTitlesBlock = existingPosts.length > 0
+    ? existingPosts.map(p => `- "${p.title}"`).join('\n')
+    : '(no published articles yet)';
+
+  const feedbackBlock = rejectionFeedback
+    ? `\nYour previous suggestion was rejected as too similar to "${rejectionFeedback.title}" (a ${rejectionFeedback.against}). Propose something meaningfully different in search intent, not just a reworded title.\n`
+    : '';
+
+  return `You are a content strategist for The Setup Vault, a home-office/desk-setup affiliate blog. We need ONE new article angle for an existing product, distinct from everything already covered.
+
+PRODUCT: ${cluster.displayName} (${cluster.realName})
+
+ANGLES ALREADY COVERED FOR THIS PRODUCT (do not repeat or closely rephrase any of these — different search intent required):
+${knownAnglesBlock}
+
+ARTICLE TITLES ALREADY PUBLISHED ON THE SITE (avoid overlapping any of these too):
+${existingTitlesBlock}
+${feedbackBlock}
+Propose one new angle that is genuinely useful to a home-office audience, targets different search intent than anything listed above, and would not read as a near-duplicate of any existing page.
+
+Return ONLY a single JSON object, no markdown fences, no commentary, in exactly this shape:
+{"angle": "kebab-case-id", "focus": "one sentence describing this specific angle", "keywords": ["kw1", "kw2", "kw3"], "rationale": "one short sentence on why this is distinct from what's already covered"}`;
+}
+
+const MAX_DYNAMIC_ATTEMPTS = 3;
+
+// Generates one new, checked-distinct angle for a single cluster. Returns
+// null (not an error) if no sufficiently distinct angle could be produced
+// after MAX_DYNAMIC_ATTEMPTS — the caller skips this cluster in that case
+// rather than forcing a duplicate.
+async function generateDynamicAngleForCluster(cluster, existingPosts, dynamicAngles) {
+  const knownAngles = getAllKnownAnglesForCluster(cluster, dynamicAngles);
+  const knownIds = new Set(knownAngles.map(a => a.angle));
+
+  let rejectionFeedback = null;
+
+  for (let attempt = 1; attempt <= MAX_DYNAMIC_ATTEMPTS; attempt++) {
+    const prompt = buildAngleGenPrompt(cluster, knownAngles, existingPosts, rejectionFeedback);
+    let candidate;
+    try {
+      const raw = await callAI(prompt);
+      candidate = extractJsonObject(raw);
+    } catch (err) {
+      logDynamicEvent({ cluster: cluster.cluster, attempt, accepted: false, error: err.message });
+      continue;
+    }
+
+    if (!candidate || !candidate.angle || !candidate.focus || !Array.isArray(candidate.keywords) || candidate.keywords.length === 0) {
+      logDynamicEvent({ cluster: cluster.cluster, attempt, accepted: false, reason: 'malformed candidate', candidate });
+      continue;
+    }
+    candidate.angle = slugify(candidate.angle);
+
+    if (knownIds.has(candidate.angle)) {
+      rejectionFeedback = { against: 'existing angle', title: candidate.angle };
+      logDynamicEvent({ cluster: cluster.cluster, attempt, accepted: false, reason: 'duplicate angle id', candidate });
+      continue;
+    }
+
+    const tooSimilar = findTooSimilar(candidate, existingPosts, knownAngles);
+    if (tooSimilar) {
+      rejectionFeedback = tooSimilar;
+      logDynamicEvent({ cluster: cluster.cluster, attempt, accepted: false, reason: 'too similar', tooSimilar, candidate });
+      continue;
+    }
+
+    logDynamicEvent({ cluster: cluster.cluster, attempt, accepted: true, candidate });
+    return candidate;
+  }
+
+  logDynamicEvent({ cluster: cluster.cluster, accepted: false, reason: 'exhausted attempts, skipping cluster' });
+  return null;
+}
+
 // Depth-first cluster picking: finish all angles of the current cluster
 // (in file order) before moving to the next cluster. This builds topical
 // authority instead of spreading one-article-per-product forever.
 //
 // IMPORTANT: used-angles.json is a PERMANENT record of every cluster:angle
-// ever published, never reset. If every slot in products.json has already
-// been used, that means there is no unpublished topic left to write about —
-// generating one anyway would just be a fresh duplicate of an existing page
-// (this is exactly what caused 138 posts across only 26 real topics before).
-// In that case pickAngle() returns null and main() stops cleanly instead of
-// manufacturing a duplicate. The fix for a null return is to add more
-// products/angles to products.json, not to let this function repeat itself.
-function pickAngle() {
-  const clusters = JSON.parse(fs.readFileSync(PRODUCTS_PATH, 'utf8'));
-  const used = JSON.parse(fs.readFileSync(USED_PATH, 'utf8'));
+// ever published, never reset. Once every hand-written slot in products.json
+// has been used, this used to mean there was nothing left to write about
+// (which is exactly what caused 138 posts across only 26 real topics before
+// the anti-duplication fix). Now, once the hand-written pool for a cluster is
+// exhausted, pickAngle() moves into DYNAMIC mode: instead of stopping, it
+// asks the AI to propose a genuinely new, checked-distinct angle for a
+// cluster (round-robin across clusters, tracked in dynamic-pointer.json, so
+// no single product cluster monopolizes every future article). If no
+// distinct angle can be found for a cluster after a few attempts, that
+// cluster is skipped for this run — never forced — and the next cluster in
+// the rotation is tried. Only if every cluster is skipped does this function
+// return null, and main() stops cleanly instead of manufacturing a
+// duplicate, exactly as before.
+async function pickAngle() {
+  const clusters = readJson(PRODUCTS_PATH, []);
+  const used = readJson(USED_PATH, []);
 
   const key = (clusterId, angle) => `${clusterId}:${angle}`;
 
-  let chosenCluster = null;
-  let chosenAngle = null;
-
+  // Phase 1: unchanged behavior — use up any remaining hand-written angle
+  // first, in the same depth-first cluster order as before.
   for (const cluster of clusters) {
     const nextAngle = cluster.angles.find(a => !used.includes(key(cluster.cluster, a.angle)));
     if (nextAngle) {
-      chosenCluster = cluster;
-      chosenAngle = nextAngle;
-      break;
+      used.push(key(cluster.cluster, nextAngle.angle));
+      writeJson(USED_PATH, used);
+      const siblingAngles = cluster.angles.filter(a => a.angle !== nextAngle.angle);
+      return { cluster, angle: nextAngle, siblingAngles };
     }
   }
 
-  if (!chosenCluster) {
-    return null;
+  // Phase 2: hand-written pool is exhausted for every cluster. Generate a
+  // new angle dynamically, round-robin across clusters so growth stays
+  // balanced across all 11 products rather than piling onto cluster[0].
+  const dynamicAngles = readJson(DYNAMIC_ANGLES_PATH, {});
+  const pointer = readJson(DYNAMIC_POINTER_PATH, { nextClusterIndex: 0 });
+  const existingPosts = getExistingPosts();
+
+  const startIndex = pointer.nextClusterIndex % clusters.length;
+  for (let offset = 0; offset < clusters.length; offset++) {
+    const index = (startIndex + offset) % clusters.length;
+    const cluster = clusters[index];
+
+    const candidate = await generateDynamicAngleForCluster(cluster, existingPosts, dynamicAngles);
+    if (!candidate) continue; // this cluster skipped, try the next one in rotation
+
+    const angle = {
+      angle: candidate.angle,
+      focus: candidate.focus,
+      keywords: candidate.keywords,
+      rationale: candidate.rationale
+    };
+
+    dynamicAngles[cluster.cluster] = [...(dynamicAngles[cluster.cluster] || []), angle];
+    writeJson(DYNAMIC_ANGLES_PATH, dynamicAngles);
+
+    used.push(key(cluster.cluster, angle.angle));
+    writeJson(USED_PATH, used);
+
+    writeJson(DYNAMIC_POINTER_PATH, { nextClusterIndex: (index + 1) % clusters.length });
+
+    const siblingAngles = getAllKnownAnglesForCluster(cluster, dynamicAngles)
+      .filter(a => a.angle !== angle.angle);
+
+    return { cluster, angle, siblingAngles };
   }
 
-  used.push(key(chosenCluster.cluster, chosenAngle.angle));
-  fs.writeFileSync(USED_PATH, JSON.stringify(used, null, 2));
-
-  const siblingAngles = chosenCluster.angles.filter(a => a.angle !== chosenAngle.angle);
-
-  return { cluster: chosenCluster, angle: chosenAngle, siblingAngles };
+  // Every cluster was tried and skipped this run — nothing distinct to write.
+  return null;
 }
 
 function getExistingPosts() {
@@ -325,19 +531,21 @@ function slugify(title) {
 }
 
 async function main() {
-  const picked = pickAngle();
+  const picked = await pickAngle();
 
   if (!picked) {
     console.log(
-      'All cluster/angle slots in products.json have already been published — ' +
-      'nothing left to write without duplicating an existing article. ' +
-      'Add new products or new angles to scripts/products.json to continue. ' +
-      'No post was written this run.'
+      'No sufficiently distinct angle could be found for any cluster this run ' +
+      '(hand-written pool exhausted and dynamic generation could not clear the ' +
+      'similarity check for every cluster). No post was written this run.'
     );
     return;
   }
 
   const { cluster, angle, siblingAngles } = picked;
+  if (angle.rationale) {
+    console.log(`[dynamic-angle] Using generated angle "${angle.angle}" for ${cluster.cluster}: ${angle.rationale}`);
+  }
   const existingPosts = getExistingPosts();
   const productCta = getProductCta(cluster.cluster);
   const prompt = buildPrompt(cluster, angle, siblingAngles, existingPosts, productCta);
