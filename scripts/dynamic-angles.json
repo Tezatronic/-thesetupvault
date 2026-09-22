@@ -12,5 +12,17 @@
       ],
       "rationale": "Focuses on thermal management benefits, a search intent not covered by existing ergonomic, travel, or buying‑guide articles"
     }
+  ],
+  "desk-lamp": [
+    {
+      "angle": "video-call-lighting",
+      "focus": "How to position and adjust a flexible gooseneck clamp LED desk lamp as an effective key or fill light for Zoom and remote video meetings.",
+      "keywords": [
+        "desk lamp for video calls",
+        "webcam lighting with desk lamp",
+        "how to light zoom calls with desk lamp"
+      ],
+      "rationale": "Targets on-camera presentation and webcam illumination search intent rather than reading comfort, eye strain, or physical desk surface footprint."
+    }
   ]
 }
