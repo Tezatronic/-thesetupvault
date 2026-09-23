@@ -24,5 +24,19 @@
       ],
       "rationale": "Targets on-camera presentation and webcam illumination search intent rather than reading comfort, eye strain, or physical desk surface footprint."
     }
+  ],
+  "cable-organizer": [
+    {
+      "angle": "cable-labeling-color-coding-with-reusable-ties",
+      "focus": "A step‑by‑step guide on using Nettbe reusable cable ties for labeling and color‑coding cables to make troubleshooting and future upgrades painless.",
+      "keywords": [
+        "cable labeling",
+        "color coding cables",
+        "reusable cable ties",
+        "desk cable troubleshooting",
+        "home office cable organization"
+      ],
+      "rationale": "Focuses on labeling and color‑coding, a maintenance‑oriented use case not covered in existing guides."
+    }
   ]
 }
