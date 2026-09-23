@@ -38,5 +38,18 @@
       ],
       "rationale": "Focuses on labeling and color‑coding, a maintenance‑oriented use case not covered in existing guides."
     }
+  ],
+  "monitor-stand": [
+    {
+      "angle": "ergonomic-benefits-monitor-stand",
+      "focus": "How using the WALI monitor stand improves posture, reduces neck/eye strain, and boosts productivity in a home‑office setup",
+      "keywords": [
+        "ergonomic monitor stand",
+        "monitor height posture",
+        "reduce neck strain home office",
+        "eye strain monitor height"
+      ],
+      "rationale": "Focuses on health and ergonomics rather than buying, storage, or arm comparisons, meeting a distinct informational search intent."
+    }
   ]
 }
