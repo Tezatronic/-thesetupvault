@@ -13,6 +13,13 @@ const DYNAMIC_ANGLES_PATH = path.join('scripts', 'dynamic-angles.json'); // { cl
 const DYNAMIC_POINTER_PATH = path.join('scripts', 'dynamic-pointer.json'); // { nextClusterIndex: N }
 const DYNAMIC_LOG_PATH = path.join('scripts', 'dynamic-angle-log.jsonl'); // audit trail, one JSON line per attempt
 
+// Demand Engine Phase 1 pilot integration point — see the Phase 0 block in
+// pickAngle() below. This file is written only by scripts/demand-research.mjs
+// (status "accepted") and scripts/promote-opportunity.mjs (status "ready").
+// generate-post.mjs only ever reads it, defensively, and only acts on
+// status "ready".
+const OPPORTUNITY_POOL_PATH = path.join('scripts', 'opportunity-pool.json');
+
 function readJson(filePath, fallback) {
   if (!fs.existsSync(filePath)) return fallback;
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -216,6 +223,50 @@ async function generateDynamicAngleForCluster(cluster, existingPosts, dynamicAng
 async function pickAngle() {
   const clusters = readJson(PRODUCTS_PATH, []);
   const used = readJson(USED_PATH, []);
+
+  // Phase 0: Demand Engine opportunities (added for the Phase 1 pilot).
+  // This is a READ-ONLY, fully defensive check — any problem here (file
+  // missing, malformed JSON, no "ready" item) falls through to Phase 1
+  // exactly as if this phase didn't exist. The Demand Engine's research job
+  // (scripts/demand-research.mjs) runs completely separately and can never
+  // reach this function directly; it only ever writes "accepted" status,
+  // which this check ignores. Only a human-promoted "ready" opportunity
+  // (via scripts/promote-opportunity.mjs) is ever picked up here — see
+  // those two files for the full pilot design.
+  try {
+    const pool = readJson(OPPORTUNITY_POOL_PATH, []);
+    const ready = Array.isArray(pool) ? pool.find(o => o && o.status === 'ready') : null;
+    if (ready && ready.cluster && ready.question) {
+      const cluster = clusters.find(c => c.cluster === ready.cluster);
+      if (cluster) {
+        const angle = {
+          angle: slugify(ready.question).slice(0, 60),
+          focus: ready.question,
+          keywords: Array.isArray(ready.keywords) && ready.keywords.length > 0 ? ready.keywords : [ready.question],
+          rationale: ready.rationale || null,
+          demandOpportunityId: ready.id
+        };
+
+        // Claim it immediately (same pattern as the static/dynamic phases
+        // below) so it can't be picked up twice if this run fails partway.
+        ready.status = 'published';
+        ready.publishedAt = new Date().toISOString();
+        writeJson(OPPORTUNITY_POOL_PATH, pool);
+
+        const key = (clusterId, a) => `${clusterId}:${a}`;
+        used.push(key(cluster.cluster, angle.angle));
+        writeJson(USED_PATH, used);
+
+        const dynamicAnglesForSiblings = readJson(DYNAMIC_ANGLES_PATH, {});
+        const siblingAngles = getAllKnownAnglesForCluster(cluster, dynamicAnglesForSiblings);
+
+        return { cluster, angle, siblingAngles, source: 'demand-engine' };
+      }
+      console.warn(`[demand-engine] Ready opportunity "${ready.id}" references unknown cluster "${ready.cluster}" — skipping, falling through to normal angle selection.`);
+    }
+  } catch (err) {
+    console.warn(`[demand-engine] Could not read opportunity pool, ignoring: ${err.message}`);
+  }
 
   const key = (clusterId, angle) => `${clusterId}:${angle}`;
 
@@ -542,8 +593,10 @@ async function main() {
     return;
   }
 
-  const { cluster, angle, siblingAngles } = picked;
-  if (angle.rationale) {
+  const { cluster, angle, siblingAngles, source } = picked;
+  if (source === 'demand-engine') {
+    console.log(`[demand-engine] Using human-approved opportunity "${angle.demandOpportunityId}" for ${cluster.cluster}: ${angle.focus}`);
+  } else if (angle.rationale) {
     console.log(`[dynamic-angle] Using generated angle "${angle.angle}" for ${cluster.cluster}: ${angle.rationale}`);
   }
   const existingPosts = getExistingPosts();
