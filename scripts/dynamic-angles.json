@@ -64,5 +64,19 @@
       ],
       "rationale": "Focuses on visual styling and minimalism rather than buying guides or functional comparisons."
     }
+  ],
+  "desk-pad": [
+    {
+      "angle": "ergonomic-wrist-support-desk-pad",
+      "focus": "How a PU leather desk pad like the Aothia can improve wrist ergonomics, reduce strain, and boost mouse precision for home‑office workers",
+      "keywords": [
+        "ergonomic desk pad",
+        "wrist support desk mat",
+        "mouse glide surface",
+        "reduce wrist strain",
+        "desk pad ergonomics"
+      ],
+      "rationale": "Focuses on health and performance benefits rather than buying, comparing, or sizing, meeting a distinct user intent."
+    }
   ]
 }
