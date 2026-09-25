@@ -78,5 +78,19 @@
       ],
       "rationale": "Focuses on health and performance benefits rather than buying, comparing, or sizing, meeting a distinct user intent."
     }
+  ],
+  "usb-hub": [
+    {
+      "angle": "usb-hub-troubleshooting-guide",
+      "focus": "A step‑by‑step guide to diagnose and fix common connectivity, speed, and power issues with a USB hub in a home‑office setup",
+      "keywords": [
+        "usb hub troubleshooting",
+        "usb hub not recognized",
+        "usb hub slow transfer",
+        "usb hub power issues",
+        "usb hub fix"
+      ],
+      "rationale": "Focuses on problem‑solving rather than buying or comparing, addressing a distinct search intent for users experiencing hub issues"
+    }
   ]
 }
