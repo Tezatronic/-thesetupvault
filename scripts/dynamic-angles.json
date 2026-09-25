@@ -92,5 +92,17 @@
       ],
       "rationale": "Focuses on problem‑solving rather than buying or comparing, addressing a distinct search intent for users experiencing hub issues"
     }
+  ],
+  "webcam": [
+    {
+      "angle": "docked-laptop-setup",
+      "focus": "A practical guide to configuring video calls when working in clamshell mode with a closed, docked laptop.",
+      "keywords": [
+        "docked laptop webcam setup",
+        "webcam for clamshell mode",
+        "closed laptop video calls"
+      ],
+      "rationale": "Unlike existing coverage focused on visual quality, FOV, or general laptop comparisons, this addresses the specific mechanical requirement of adding video and audio when the laptop is physically closed."
+    }
   ]
 }
