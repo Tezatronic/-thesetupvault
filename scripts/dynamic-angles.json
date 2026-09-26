@@ -116,5 +116,17 @@
       ],
       "rationale": "Focuses specifically on cross-machine workflow efficiency for hybrid workers rather than noise levels, switch types, or general purchasing criteria."
     }
+  ],
+  "wireless-charger-pad": [
+    {
+      "angle": "peripheral-charging-explainer",
+      "focus": "Explaining whether a wireless charging mouse pad can actually charge a wireless mouse or just smartphones, breaking down Qi compatibility across office peripherals.",
+      "keywords": [
+        "can wireless charging mouse pad charge wireless mouse",
+        "qi wireless charging mouse compatibility",
+        "charge mouse on wireless charging desk mat"
+      ],
+      "rationale": "Addresses a widespread buyer misconception about charging mice versus phones on Qi pads rather than generic product recommendations, sizing, or pad-versus-stand ergonomics."
+    }
   ]
 }
