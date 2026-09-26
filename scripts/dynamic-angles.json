@@ -104,5 +104,17 @@
       ],
       "rationale": "Unlike existing coverage focused on visual quality, FOV, or general laptop comparisons, this addresses the specific mechanical requirement of adding video and audio when the laptop is physically closed."
     }
+  ],
+  "keyboard-mouse-combo": [
+    {
+      "angle": "multi-device-dual-computer",
+      "focus": "How to select and set up a multi-device wireless keyboard and mouse combo to seamlessly switch between a work laptop and personal desktop at the same desk.",
+      "keywords": [
+        "multi device wireless keyboard and mouse combo",
+        "one keyboard and mouse for two computers",
+        "dual computer wireless keyboard and mouse"
+      ],
+      "rationale": "Focuses specifically on cross-machine workflow efficiency for hybrid workers rather than noise levels, switch types, or general purchasing criteria."
+    }
   ]
 }
