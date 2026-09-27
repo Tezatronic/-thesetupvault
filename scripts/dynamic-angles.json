@@ -128,5 +128,17 @@
       ],
       "rationale": "Addresses a widespread buyer misconception about charging mice versus phones on Qi pads rather than generic product recommendations, sizing, or pad-versus-stand ergonomics."
     }
+  ],
+  "mini-desktop-fan": [
+    {
+      "angle": "laptop-cooling-assist",
+      "focus": "How to strategically position a mini USB desk fan to prevent laptop overheating and thermal throttling without a bulky cooling pad.",
+      "keywords": [
+        "usb fan for laptop cooling",
+        "cool laptop with desk fan",
+        "laptop overheating desk fan"
+      ],
+      "rationale": "Targets computer hardware thermal management rather than personal comfort, acoustics, or form-factor comparisons."
+    }
   ]
 }
