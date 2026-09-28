@@ -33,6 +33,18 @@
         "how to light zoom calls with desk lamp"
       ],
       "rationale": "Targets on-camera presentation and webcam illumination search intent rather than reading comfort, eye strain, or physical desk surface footprint."
+    },
+    {
+      "angle": "ergonomic-lamp-placement",
+      "focus": "A guide on positioning and adjusting a gooseneck LED desk lamp to improve posture and reduce neck/back strain during long work sessions",
+      "keywords": [
+        "ergonomic desk lamp",
+        "neck strain lighting",
+        "lamp placement ergonomics",
+        "gooseneck lamp posture",
+        "home office ergonomics"
+      ],
+      "rationale": "Focuses on posture health, not eye strain or video lighting, offering a distinct ergonomic angle"
     }
   ],
   "cable-organizer": [
