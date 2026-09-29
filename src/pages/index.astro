@@ -3,7 +3,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import ChecklistCapture from '../components/ChecklistCapture.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+import { FEATURED_GUIDES, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const allPosts = await getCollection('blog');
+const featured = FEATURED_GUIDES.map((id) => allPosts.find((post) => post.id === id)).filter(
+	(post) => post !== undefined
+);
 ---
 
 <!doctype html>
@@ -44,6 +50,39 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				background: var(--accent-dark);
 				color: white;
 			}
+			.featured {
+				margin: 2.5em 0;
+			}
+			.featured h2 {
+				font-size: 1.3em;
+				margin-bottom: 0.3em;
+			}
+			.featured > p {
+				margin-bottom: 0.5em;
+			}
+			.featured ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.featured li {
+				border-top: 1px solid rgb(var(--gray-light));
+				padding: 0.9em 0;
+			}
+			.featured li:last-child {
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.featured li a {
+				font-weight: 700;
+				text-decoration: none;
+			}
+			.featured li a:hover {
+				text-decoration: underline;
+			}
+			.featured li p {
+				margin: 0.3em 0 0;
+				font-size: 0.95em;
+			}
 		</style>
 	</head>
 	<body>
@@ -75,6 +114,21 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 					<a class="cta" href="/products">See our products →</a>
 				</div>
 			</div>
+
+			{featured.length > 0 && (
+				<section class="featured">
+					<h2>Start with these guides</h2>
+					<p>Comparisons and how-tos that answer the setup questions people ask most.</p>
+					<ul>
+						{featured.map((post) => (
+							<li>
+								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+								<p>{post.data.description}</p>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
 
 			<ChecklistCapture />
 
