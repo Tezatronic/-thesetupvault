@@ -180,6 +180,18 @@
         "closed laptop video calls"
       ],
       "rationale": "Unlike existing coverage focused on visual quality, FOV, or general laptop comparisons, this addresses the specific mechanical requirement of adding video and audio when the laptop is physically closed."
+    },
+    {
+      "angle": "low-light-performance-and-tips",
+      "focus": "A hands‑on review of the EMEET C960’s video quality in dim environments plus practical lighting hacks to get clear 1080p video on any call or stream",
+      "keywords": [
+        "webcam low light performance",
+        "EMEET C960 night mode",
+        "best webcam for dim lighting",
+        "low light webcam tips",
+        "improve webcam video in dark rooms"
+      ],
+      "rationale": "Focuses on low‑light video quality and lighting solutions, a use‑case not covered by existing buying‑guide, FOV, or docked‑laptop articles."
     }
   ],
   "keyboard-mouse-combo": [
