@@ -1,0 +1,22 @@
+name: IndexNow - Submit All URLs
+
+# Manual only. One-time backfill: sends every URL in the live sitemap to IndexNow
+# so Bing learns about existing pages. Re-run any time, e.g. after a big content change.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Submit all sitemap URLs
+        run: node scripts/indexnow.mjs --sitemap --strict
