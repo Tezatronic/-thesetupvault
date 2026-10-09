@@ -18,7 +18,7 @@ import path from 'node:path';
 
 const SITE = (process.env.INDEXNOW_SITE || 'https://thesetupvault.vercel.app').replace(/\/$/, '');
 const KEY = process.env.INDEXNOW_KEY || 'eee8e53ef45e423687ba59df31e1cb2c';
-const ENDPOINT = process.env.INDEXNOW_ENDPOINT || 'https://api.indexnow.org/indexnow';
+const ENDPOINT = process.env.INDEXNOW_ENDPOINT || 'https://api.indexnow.org/IndexNow';
 const WAIT_ATTEMPTS = Number(process.env.INDEXNOW_WAIT_ATTEMPTS || 24); // x15s = 6 min
 const WAIT_MS = Number(process.env.INDEXNOW_WAIT_MS || 15000);
 const CHUNK = 10000; // IndexNow max URLs per request
