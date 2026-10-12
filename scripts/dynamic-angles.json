@@ -249,6 +249,16 @@
         "laptop overheating desk fan"
       ],
       "rationale": "Targets computer hardware thermal management rather than personal comfort, acoustics, or form-factor comparisons."
+    },
+    {
+      "angle": "video-call-audio-optimization",
+      "focus": "How to position and angle a mini USB desk fan to stay cool during video meetings without causing microphone wind buffeting or audio hum.",
+      "keywords": [
+        "desk fan microphone noise",
+        "desk fan for zoom calls",
+        "prevent fan noise on mic work from home"
+      ],
+      "rationale": "Targets teleconferencing audio interference and mic placement rather than ambient room cooling, laptop thermals, or shared-office etiquette."
     }
   ]
 }
