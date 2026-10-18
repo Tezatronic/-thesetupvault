@@ -37,6 +37,7 @@ const { target } = Astro.props as { target: Target };
 		<BaseHead
 			title={`Redirecting… — The Setup Vault`}
 			description={`Redirecting to ${target.title} on Whop.`}
+			noindex
 		/>
 		<!-- No-JS fallback: still redirects, just without a tracked pageview -->
 		<noscript>

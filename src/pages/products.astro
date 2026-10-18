@@ -3,37 +3,18 @@ import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_DESCRIPTION } from '../consts';
-import DeskGuideCover from '../assets/product-cover-desk-setup-guide.png';
-import PlannerCover from '../assets/product-cover-desk-setup-planner.png';
+import { PRODUCTS } from '../data/products';
 import ChecklistCapture from '../components/ChecklistCapture.astro';
 
-const products = [
-	{
-		title: 'The Ultimate Desk Setup & Cable Management Guide',
-		description:
-			'A short, practical PDF guide for getting your cables under control. It walks you through picking the setup profile that matches your desk — Minimalist, Dual-Screen Standard, Power User, or Hybrid Worker — then gives you that profile\'s cable-routing plan and checklist.',
-		audience: 'Best for: fixing cable clutter on the desk you already have.',
-		price: '$10',
-		originalPrice: '$12.50',
-		url: '/go/cable-guide/',
-		cover: DeskGuideCover,
-	},
-	{
-		title: 'The Complete Desk Setup Planner',
-		description:
-			'A 34-page planning workbook for figuring out your whole workspace before you buy anything else. Diagnose what\'s not working, measure your space, plan monitor and cable placement, organize what you already have, and work out what\'s actually worth upgrading first.',
-		audience: 'Best for: planning or reworking your whole workspace before you spend another dollar.',
-		price: '$19',
-		url: '/go/desk-planner/',
-		cover: PlannerCover,
-	},
-];
+const products = PRODUCTS;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={`Products — The Setup Vault`} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title="Desk Setup Guides & Planner (PDF) | The Setup Vault"
+			description="Two PDF guides from The Setup Vault: a cable management guide and a 34-page desk setup planner for planning your workspace before you buy more gear."
+		/>
 		<style>
 			main {
 				width: 820px;

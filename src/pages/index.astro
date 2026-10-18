@@ -4,7 +4,9 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import ChecklistCapture from '../components/ChecklistCapture.astro';
 import { getCollection } from 'astro:content';
-import { FEATURED_GUIDES, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+import { FEATURED_GUIDES, SITE_TITLE } from '../consts';
+import { PRODUCTS } from '../data/products';
 
 const allPosts = await getCollection('blog');
 const featured = FEATURED_GUIDES.map((id) => allPosts.find((post) => post.id === id)).filter(
@@ -16,7 +18,28 @@ const featured = FEATURED_GUIDES.map((id) => allPosts.find((post) => post.id ===
 <html lang="en">
 	<head>
         <meta name="msvalidate.01" content="150552B19FC8B6D3BA6793A45AEC79F2" />
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title="The Setup Vault | Desk Setup Guides & Planning Tools"
+			description="Practical desk setup guides plus our own cable management guide and workspace planner, so you plan your home office before you buy more gear."
+			schema={[
+				{
+					'@context': 'https://schema.org',
+					'@type': 'WebSite',
+					name: SITE_TITLE,
+					url: 'https://thesetupvault.vercel.app/',
+				},
+				{
+					'@context': 'https://schema.org',
+					'@type': 'Organization',
+					name: SITE_TITLE,
+					url: 'https://thesetupvault.vercel.app/',
+					sameAs: [
+						'https://www.pinterest.com/thesetupvault_/',
+						'https://beacons.page/thesetupvault',
+					],
+				},
+			]}
+		/>
 		<style>
 			.paths {
 				display: flex;
@@ -49,6 +72,64 @@ const featured = FEATURED_GUIDES.map((id) => allPosts.find((post) => post.id ===
 			.path a.cta:hover {
 				background: var(--accent-dark);
 				color: white;
+			}
+			.own-products {
+				margin: 2.5em 0;
+			}
+			.own-products h2 {
+				font-size: 1.3em;
+				margin-bottom: 0.3em;
+			}
+			.product-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5em;
+				margin: 1.25em 0 0.75em;
+			}
+			.product-card {
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 14px;
+				padding: 1.25em;
+				text-align: center;
+			}
+			.product-card img {
+				margin: 0 auto 0.75em;
+				display: block;
+			}
+			.product-card h3 {
+				font-size: 1.05em;
+				margin: 0 0 0.4em;
+			}
+			.product-card p {
+				margin: 0 0 0.6em;
+				font-size: 0.95em;
+			}
+			.product-card .price {
+				font-weight: 700;
+				font-size: 1.2em;
+			}
+			.product-card .price-original {
+				text-decoration: line-through;
+				color: rgb(var(--gray));
+				margin-left: 0.4em;
+			}
+			.product-card a.cta {
+				display: inline-block;
+				background: var(--accent);
+				color: white;
+				font-weight: 700;
+				text-decoration: none;
+				padding: 0.55em 1.1em;
+				border-radius: 8px;
+				font-size: 0.9em;
+			}
+			.all-products {
+				text-align: center;
+			}
+			@media (max-width: 640px) {
+				.product-grid {
+					grid-template-columns: 1fr;
+				}
 			}
 			.featured {
 				margin: 2.5em 0;
@@ -105,15 +186,30 @@ const featured = FEATURED_GUIDES.map((id) => allPosts.find((post) => post.id ===
 					</p>
 					<a class="cta" href="/blog">Browse all guides →</a>
 				</div>
-				<div class="path">
-					<h2>Our Own Tools</h2>
-					<p>
-						If you're planning or reorganizing your whole workspace rather than fixing one
-						thing, our own guides walk you through that process end to end.
-					</p>
-					<a class="cta" href="/products">See our products →</a>
-				</div>
 			</div>
+
+			<section class="own-products">
+				<h2>Our guides and planners</h2>
+				<p>
+					If you're planning or reorganizing your whole workspace rather than fixing one
+					thing, our own PDF guides walk you through it end to end.
+				</p>
+				<div class="product-grid">
+					{PRODUCTS.map((p) => (
+						<div class="product-card">
+							<Image src={p.cover} width={160} height={160} alt={`Cover of ${p.title}`} />
+							<h3>{p.title}</h3>
+							<p>{p.outcome}</p>
+							<p class="price-row">
+								<span class="price">{p.price}</span>
+								{p.originalPrice && <span class="price-original">{p.originalPrice}</span>}
+							</p>
+							<a class="cta" href={p.url}>Get the {p.shortTitle.toLowerCase()} →</a>
+						</div>
+					))}
+				</div>
+				<p class="all-products"><a href="/products">See both guides in detail →</a></p>
+			</section>
 
 			{featured.length > 0 && (
 				<section class="featured">

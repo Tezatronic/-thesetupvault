@@ -6,15 +6,55 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import ChecklistCapture from '../components/ChecklistCapture.astro';
+import { productForSlug } from '../data/products';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & { slug?: string; hasProductCta?: boolean };
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, slug, hasProductCta } = Astro.props;
+
+// Article markup only for real guides under /blog/ (the About page also uses this layout).
+const isGuide = Astro.url.pathname.startsWith('/blog/');
+const site = 'https://thesetupvault.vercel.app';
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const publisher = { '@type': 'Organization', name: 'The Setup Vault', url: `${site}/` };
+const schema = isGuide
+	? [
+			{
+				'@context': 'https://schema.org',
+				'@type': 'Article',
+				headline: title,
+				description,
+				datePublished: pubDate.toISOString(),
+				dateModified: (updatedDate ?? pubDate).toISOString(),
+				author: publisher,
+				publisher,
+				image: `${site}/og-default.png`,
+				mainEntityOfPage: pageUrl,
+			},
+			{
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+				itemListElement: [
+					{ '@type': 'ListItem', position: 1, name: 'Home', item: `${site}/` },
+					{ '@type': 'ListItem', position: 2, name: 'Guides', item: `${site}/blog/` },
+					{ '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+				],
+			},
+		]
+	: undefined;
+
+// One matching owned-product block per guide, unless the guide already links to one.
+const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : undefined;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead
+			title={title}
+			description={description}
+			ogType={isGuide ? 'article' : 'website'}
+			schema={schema}
+		/>
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -53,6 +93,31 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			.own-product {
+				margin: 2em 0;
+				padding: 1.1em 1.25em;
+				border: 1px solid rgb(var(--gray-light));
+				border-left: 4px solid var(--accent);
+				border-radius: 10px;
+			}
+			.own-product h3 {
+				margin: 0 0 0.35em;
+				font-size: 1.1em;
+			}
+			.own-product p {
+				margin: 0 0 0.75em;
+				font-size: 0.95em;
+			}
+			.own-product a {
+				display: inline-block;
+				background: var(--accent);
+				color: white;
+				font-weight: 700;
+				text-decoration: none;
+				padding: 0.5em 1.1em;
+				border-radius: 8px;
+				font-size: 0.9em;
+			}
 		</style>
 	</head>
 
@@ -82,6 +147,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<strong>Disclosure:</strong> This post contains affiliate links. If you make a purchase through one of these links, we may earn a commission at no additional cost to you.
 				</p>
 				<slot />
+				{ownProduct && (
+					<aside class="own-product">
+						<h3>{ownProduct.title}</h3>
+						<p>{ownProduct.outcome} {ownProduct.price} PDF.</p>
+						<a href={ownProduct.url}>See the {ownProduct.shortTitle.toLowerCase()} →</a>
+					</aside>
+				)}
 				<ChecklistCapture />
 				</div>
 			</article>
