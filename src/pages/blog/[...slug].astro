@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
+import { relatedFor, topicByKey, topicKeyForSlug } from '../../data/topics';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -13,8 +14,17 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+const allPosts = await getCollection('blog');
+const topic = topicByKey(topicKeyForSlug(post.id));
+const related = relatedFor(post, allPosts).map((p) => ({ title: p.data.title, url: `/blog/${p.id}/` }));
 ---
 
-<BlogPost {...post.data} slug={post.id} hasProductCta={(post.body ?? '').includes('/go/')}>
+<BlogPost
+	{...post.data}
+	slug={post.id}
+	hasProductCta={(post.body ?? '').includes('/go/')}
+	topic={{ key: topic.key, label: topic.label }}
+	related={related}
+>
 	<Content />
 </BlogPost>

@@ -8,9 +8,14 @@ import Header from '../components/Header.astro';
 import ChecklistCapture from '../components/ChecklistCapture.astro';
 import { productForSlug } from '../data/products';
 
-type Props = CollectionEntry<'blog'>['data'] & { slug?: string; hasProductCta?: boolean };
+type Props = CollectionEntry<'blog'>['data'] & {
+	slug?: string;
+	hasProductCta?: boolean;
+	topic?: { key: string; label: string };
+	related?: { title: string; url: string }[];
+};
 
-const { title, description, pubDate, updatedDate, heroImage, slug, hasProductCta } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, slug, hasProductCta, topic, related = [] } = Astro.props;
 
 // Article markup only for real guides under /blog/ (the About page also uses this layout).
 const isGuide = Astro.url.pathname.startsWith('/blog/');
@@ -99,6 +104,21 @@ const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : un
 			.last-updated-on {
 				font-style: italic;
 			}
+			.related {
+				margin: 2em 0;
+			}
+			.related h3 {
+				margin: 0 0 0.5em;
+				font-size: 1.1em;
+			}
+			.related ul {
+				margin: 0;
+				padding-left: 1.2em;
+			}
+			.related li {
+				margin-bottom: 0.4em;
+				line-height: 1.4;
+			}
 			.own-product {
 				margin: 2em 0;
 				padding: 1.1em 1.25em;
@@ -147,7 +167,19 @@ const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : un
 							}
 						</div>
 						<h1>{title}</h1>
-						{isGuide && <p class="byline">By <a href="/about">Teza Simulunga</a></p>}
+						{
+							isGuide && (
+								<p class="byline">
+									By <a href="/about">Teza Simulunga</a>
+									{topic && (
+										<>
+											{' · '}
+											<a href={`/blog/topic/${topic.key}/`}>{topic.label}</a>
+										</>
+									)}
+								</p>
+							)
+						}
 					<hr />
 				</div>
 				<p style="background: #f4f4f8; border-left: 4px solid var(--accent); padding: 0.75em 1em; font-size: 0.85em; color: rgb(var(--gray-dark));">
@@ -160,6 +192,14 @@ const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : un
 						<p>{ownProduct.outcome} {ownProduct.price} PDF.</p>
 						<a href={ownProduct.url}>See the {ownProduct.shortTitle.toLowerCase()} →</a>
 					</aside>
+				)}
+				{isGuide && related.length > 0 && (
+					<nav class="related" aria-label="Related guides">
+						<h3>Related guides</h3>
+						<ul>
+							{related.map((r) => <li><a href={r.url}>{r.title}</a></li>)}
+						</ul>
+					</nav>
 				)}
 				<ChecklistCapture />
 				</div>

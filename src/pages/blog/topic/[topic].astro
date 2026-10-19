@@ -1,0 +1,129 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import Footer from '../../../components/Footer.astro';
+import FormattedDate from '../../../components/FormattedDate.astro';
+import Header from '../../../components/Header.astro';
+import { TOPICS, topicKeyForSlug } from '../../../data/topics';
+
+export async function getStaticPaths() {
+	const posts = (await getCollection('blog')).sort(
+		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	);
+	return TOPICS.map((topic) => ({
+		params: { topic: topic.key },
+		props: { topic, posts: posts.filter((p) => topicKeyForSlug(p.id) === topic.key) },
+	})).filter((x) => x.props.posts.length >= 2);
+}
+
+const { topic, posts } = Astro.props;
+const site = 'https://thesetupvault.vercel.app';
+const pageUrl = `${site}/blog/topic/${topic.key}/`;
+const schema = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: topic.title,
+		description: topic.intro,
+		url: pageUrl,
+		hasPart: posts.map((p) => ({
+			'@type': 'Article',
+			headline: p.data.title,
+			url: `${site}/blog/${p.id}/`,
+		})),
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: `${site}/` },
+			{ '@type': 'ListItem', position: 2, name: 'Guides', item: `${site}/blog/` },
+			{ '@type': 'ListItem', position: 3, name: topic.title, item: pageUrl },
+		],
+	},
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`${topic.title} | The Setup Vault`}
+			description={`${topic.intro} ${posts.length} guides from The Setup Vault.`}
+			schema={schema}
+		/>
+		<style>
+			main {
+				width: 820px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 3em 1em;
+			}
+			.crumbs {
+				font-size: 0.85em;
+				color: rgb(var(--gray));
+				margin: 0 0 1em;
+			}
+			h1 {
+				margin: 0 0 0.3em;
+				font-size: clamp(1.6em, 8vw, 2.4em);
+				line-height: 1.2;
+				overflow-wrap: break-word;
+			}
+			.intro {
+				color: rgb(var(--gray-dark));
+				margin: 0 0 2em;
+			}
+			.guide-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1.4em;
+			}
+			.guide-list a {
+				font-weight: 700;
+				font-size: 1.05em;
+				text-decoration: none;
+			}
+			.guide-list a:hover {
+				text-decoration: underline;
+			}
+			.guide-list p {
+				margin: 0.25em 0 0;
+				font-size: 0.9em;
+				color: rgb(var(--gray-dark));
+			}
+			.guide-list .date {
+				font-size: 0.8em;
+				color: rgb(var(--gray));
+			}
+			.more {
+				margin-top: 2.5em;
+				font-size: 0.9em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<p class="crumbs"><a href="/">Home</a> › <a href="/blog/">Guides</a> › {topic.label}</p>
+			<h1>{topic.title}</h1>
+			<p class="intro">{topic.intro}</p>
+			<ul class="guide-list">
+				{
+					posts.map((p) => (
+						<li>
+							<a href={`/blog/${p.id}/`}>{p.data.title}</a>
+							<p>{p.data.description}</p>
+							<p class="date"><FormattedDate date={p.data.pubDate} /></p>
+						</li>
+					))
+				}
+			</ul>
+			<p class="more"><a href="/blog/">← All guides</a></p>
+		</main>
+		<Footer />
+	</body>
+</html>
