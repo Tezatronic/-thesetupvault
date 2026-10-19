@@ -1,5 +1,6 @@
 import DeskGuideCover from '../assets/product-cover-desk-setup-guide.png';
 import PlannerCover from '../assets/product-cover-desk-setup-planner.png';
+import BundleCover from '../assets/product-cover-setup-bundle.png';
 
 // Single source of truth for the two owned products (used by /products and the home page).
 export const PRODUCTS = [
@@ -28,6 +29,19 @@ export const PRODUCTS = [
 		originalPrice: undefined as string | undefined,
 		url: '/go/desk-planner/',
 		cover: PlannerCover,
+	},
+	{
+		id: 'setup-bundle',
+		title: 'The Setup Bundle',
+		shortTitle: 'Setup Bundle',
+		description:
+			'Both PDF guides in one purchase: The Ultimate Desk Setup & Cable Management Guide and The Complete Desk Setup Planner. Plan the whole workspace, then follow the cable-routing plan that matches your setup.',
+		outcome: 'Get both guides together: plan your workspace and sort your cables.',
+		audience: 'Best for: doing both — planning the workspace and fixing the cables.',
+		price: '$29',
+		originalPrice: undefined as string | undefined,
+		url: '/go/setup-bundle/',
+		cover: BundleCover,
 	},
 ];
 

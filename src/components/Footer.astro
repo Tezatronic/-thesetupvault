@@ -5,8 +5,11 @@ const today = new Date();
 <footer>
 	&copy; {today.getFullYear()} The Setup Vault. All rights reserved.
 	<div class="social-links">
-		<a href="https://www.pinterest.com/thesetupvault_/" target="_blank">Pinterest</a>
-		<a href="https://beacons.page/thesetupvault" target="_blank">Beacons</a>
+		<a href="https://www.pinterest.com/thesetupvault_/" target="_blank" rel="noopener">Pinterest</a>
+		<a href="https://www.instagram.com/the.setup.vault/" target="_blank" rel="noopener">Instagram</a>
+		<a href="https://www.tiktok.com/@the.setup.vault" target="_blank" rel="noopener">TikTok</a>
+		<a href="https://whop.com/the-setup-vault/products" target="_blank" rel="noopener">Whop Store</a>
+		<a href="https://beacons.page/thesetupvault" target="_blank" rel="noopener">Beacons</a>
 	</div>
 </footer>
 <style>
@@ -19,7 +22,8 @@ const today = new Date();
 	.social-links {
 		display: flex;
 		justify-content: center;
-		gap: 1.5em;
+		flex-wrap: wrap;
+		gap: 0.6em 1.5em;
 		margin-top: 1em;
 	}
 	.social-links a {

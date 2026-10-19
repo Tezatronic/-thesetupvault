@@ -13,8 +13,11 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
 		<div class="social-links">
-			<a href="https://www.pinterest.com/thesetupvault_/" target="_blank">Pinterest</a>
-			<a href="https://beacons.page/thesetupvault" target="_blank">Beacons</a>
+			<a href="https://www.pinterest.com/thesetupvault_/" target="_blank" rel="noopener">Pinterest</a>
+			<a href="https://www.instagram.com/the.setup.vault/" target="_blank" rel="noopener">Instagram</a>
+			<a href="https://www.tiktok.com/@the.setup.vault" target="_blank" rel="noopener">TikTok</a>
+			<a href="https://whop.com/the-setup-vault/products" target="_blank" rel="noopener">Whop Store</a>
+			<a href="https://beacons.page/thesetupvault" target="_blank" rel="noopener">Beacons</a>
 		</div>
 	</nav>
 </header>
@@ -51,11 +54,12 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	.social-links {
 		display: flex;
-		gap: 1em;
+		gap: 0.9em;
 		font-weight: 600;
+		font-size: 0.9em;
 		text-decoration: underline;
 	}
-	@media (max-width: 720px) {
+	@media (max-width: 1000px) {
 		.social-links {
 			display: none;
 		}
