@@ -17,6 +17,7 @@ const isGuide = Astro.url.pathname.startsWith('/blog/');
 const site = 'https://thesetupvault.vercel.app';
 const pageUrl = new URL(Astro.url.pathname, site).href;
 const publisher = { '@type': 'Organization', name: 'The Setup Vault', url: `${site}/` };
+const author = { '@type': 'Person', name: 'Teza Simulunga', url: `${site}/about/` };
 const schema = isGuide
 	? [
 			{
@@ -26,7 +27,7 @@ const schema = isGuide
 				description,
 				datePublished: pubDate.toISOString(),
 				dateModified: (updatedDate ?? pubDate).toISOString(),
-				author: publisher,
+				author,
 				publisher,
 				image: `${site}/og-default.png`,
 				mainEntityOfPage: pageUrl,
@@ -90,6 +91,11 @@ const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : un
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
 			}
+			.byline {
+				margin: 0.25em 0 0;
+				font-size: 0.95em;
+				color: rgb(var(--gray));
+			}
 			.last-updated-on {
 				font-style: italic;
 			}
@@ -141,6 +147,7 @@ const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : un
 							}
 						</div>
 						<h1>{title}</h1>
+						{isGuide && <p class="byline">By <a href="/about">Teza Simulunga</a></p>}
 					<hr />
 				</div>
 				<p style="background: #f4f4f8; border-left: 4px solid var(--accent); padding: 0.75em 1em; font-size: 0.85em; color: rgb(var(--gray-dark));">
