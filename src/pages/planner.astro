@@ -22,6 +22,7 @@ import Footer from '../components/Footer.astro';
 <h1>Plan your desk in two minutes</h1>
 <p>Answer four questions, then drag your gear around a top-down view of your desk. The fit check tells you what’s crowded before you move anything for real.</p>
 <div id="qs"></div>
+<p class="note" id="rn" hidden>Rebuilding resets any items you moved or added.</p>
 <button class="btn" id="go">Build my desk</button>
 </section>
 
@@ -33,6 +34,7 @@ import Footer from '../components/Footer.astro';
 <button class="btn alt" id="rot" disabled>Rotate selected</button>
 <button class="btn alt" id="add">Add item</button>
 <button class="btn alt" id="del" disabled>Remove selected</button>
+<button class="btn alt" id="chg">Change my answers</button>
 <button class="btn alt" id="rst">Reset layout</button>
 <button class="btn" id="fin">See my result</button>
 </div>
@@ -60,7 +62,8 @@ import Footer from '../components/Footer.astro';
 <div class="row" style="margin:0"><a class="btn" href="https://whop.com/the-setup-vault/products/the-setup-bundle/?utm_source=setupvault&utm_medium=planner" target="_blank" rel="noopener">Get the Setup Bundle, $29</a>
 <a class="btn alt" href="https://whop.com/the-setup-vault/?utm_source=setupvault&utm_medium=planner" target="_blank" rel="noopener">Browse all guides</a></div>
 </div>
-<div class="row"><button class="btn alt" id="back">Edit layout</button></div>
+<div class="row"><button class="btn alt" id="back">Edit layout</button>
+<button class="btn alt" id="chg2">Change my answers</button></div>
 </section>
 </div></div>
 		<Footer />
@@ -176,6 +179,8 @@ $("#chk").innerHTML=["Measure your desk to confirm it’s about "+W+" × "+H+" c
 A.mon>1?"Match monitor heights so the tops line up.":"Set the top of the screen at or just below eye level.",
 "Keep screens 50 to 70 cm from your eyes.","Put the power strip under the desk, not on top.","Place the lamp beside the screens, not in front of them."].map(t=>"<li>"+t+"</li>").join("");
 $("#plan").hidden=true;$("#res").hidden=false;scrollTo(0,0)};
+function toIntro(){$("#plan").hidden=true;$("#res").hidden=true;$("#intro").hidden=false;$("#rn").hidden=false;$("#go").textContent="Rebuild my desk";scrollTo(0,0)}
+$("#chg").onclick=toIntro;$("#chg2").onclick=toIntro;
 $("#back").onclick=()=>{$("#res").hidden=true;$("#plan").hidden=false;render()};
 </script>
 	</body>
