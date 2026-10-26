@@ -201,6 +201,18 @@
         "pu leather desk mat maintenance"
       ],
       "rationale": "Targets post-purchase maintenance and troubleshooting search intent rather than pre-purchase comparison, sizing, or ergonomics."
+    },
+    {
+      "angle": "sound-dampening-desk-pad",
+      "focus": "How the Aothia PU leather desk pad can mute keyboard clicks, mouse clicks, and desk vibrations, creating a quieter home‑office environment",
+      "keywords": [
+        "desk pad sound reduction",
+        "quiet desk mat",
+        "noise dampening desk pad",
+        "reduce desk vibrations",
+        "silent home office"
+      ],
+      "rationale": "Targets acoustic/quiet‑office concerns, a search intent not covered by existing ergonomic, sizing, or care articles"
     }
   ],
   "usb-hub": [
