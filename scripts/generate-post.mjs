@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fixInternalLinks } from './lib/fix-internal-links.mjs';
+import { stripRetailLinks } from './lib/strip-retail-links.mjs';
 
 const PRODUCTS_PATH = path.join('scripts', 'products.json');
 const USED_PATH = path.join('scripts', 'used-angles.json');
@@ -351,8 +352,8 @@ function buildPrompt(cluster, angle, siblingAngles, existingPosts, productCta) {
     : '';
 
   const productCtaBlock = productCta
-    ? `- Additionally, include exactly ONE mention of our own product, "${productCta.name}" (${productCta.url}), framed as the logical next step for a reader who wants to go further than this one article — specifically around ${productCta.hook}. This is the PRIMARY CTA of the article, more prominent in framing than the Amazon links, but it must read as a genuine, specific, non-pushy next step, not an ad. Do not use hyped or ad-like language ("must-have," "game-changing," "don't miss out"). Solve the reader's actual question from this article first — the product mention should feel like the natural continuation once that's done, not an interruption. Place it wherever it fits most naturally given how this specific article's structure unfolds (this will vary article to article — do not force it into a fixed position like "right after the intro" every time). Use the exact link format: [descriptive link text tied to ${productCta.hook}](${productCta.url}), on its own line.`
-    : `- This article's product category does not have a matching owned-product guide. Do not invent or reference an owned product for this article — Amazon affiliate links (per the rule above) are the only monetization link in this article.`;
+    ? `- Additionally, include exactly ONE mention of our own product, "${productCta.name}" (${productCta.url}), framed as the logical next step for a reader who wants to go further than this one article — specifically around ${productCta.hook}. This is the PRIMARY CTA of the article, but it must read as a genuine, specific, non-pushy next step, not an ad. Do not use hyped or ad-like language ("must-have," "game-changing," "don't miss out"). Solve the reader's actual question from this article first — the product mention should feel like the natural continuation once that's done, not an interruption. Place it wherever it fits most naturally given how this specific article's structure unfolds (this will vary article to article — do not force it into a fixed position like "right after the intro" every time). Use the exact link format: [descriptive link text tied to ${productCta.hook}](${productCta.url}), on its own line.`
+    : `- This article's product category does not have a matching owned-product guide. Do not invent or reference an owned product for this article, and do not include any product purchase links in it.`;
 
   const specsBlock = cluster.verifiedSpecs
     ? `\nVERIFIED REAL SPECS FOR THIS PRODUCT (these are confirmed accurate — you may state these exact figures, and ONLY these, when making numeric claims):\n${Object.entries(cluster.verifiedSpecs).map(([k, v]) => `- ${k.replace(/_/g, ' ')}: ${v}`).join('\n')}\nDo NOT state any other specific numeric spec, capacity, weight, dimension, or figure about this product beyond what is listed above. If you want to mention a spec not listed here, describe it qualitatively instead (e.g. "sturdy," "compact," "lightweight") rather than inventing a number.\n`
@@ -363,7 +364,6 @@ function buildPrompt(cluster, angle, siblingAngles, existingPosts, productCta) {
 PRODUCT FOR THIS ARTICLE:
 - Display name: ${cluster.displayName}
 - Real product: ${cluster.realName}
-- Affiliate link: ${cluster.link}
 ${specsBlock}
 YOUR SPECIFIC ANGLE FOR THIS ARTICLE (stay tightly focused on this — do not turn it into a generic product review):
 - Angle: ${angle.angle}
@@ -389,7 +389,7 @@ REQUIREMENTS:
 - Output ONLY the raw markdown file content, starting with a YAML frontmatter block delimited by --- lines, with exactly these fields: title, description, pubDate (format: YYYY-MM-DD, use today's date). Do not include a slug field.
 - After the frontmatter, write the full article body in Markdown.
 - Naturally include a "## Who This Isn't For" or "## Potential Drawbacks" section that names 1-2 real limitations relevant to your angle — do not invent fake numbers, but general/typical specs and honest tradeoffs are expected.
-- Insert the exact same affiliate link, using this exact format: [Check current price](${cluster.link}) — a MAXIMUM of 2 separate times throughout the article, never a placeholder link, and never more than 2. Amazon is supporting monetization here, not the primary focus of the article. Place one instance at the highest-intent point (right after the main product recommendation/breakdown) and, if it fits naturally, one more near the very end. Each instance should sit on its own line, not buried mid-sentence inside a paragraph. If only one placement genuinely fits the article's flow, use only one — do not force a second just to hit a quota.
+- Do NOT include any links to Amazon or any other retailer, and no "Check current price" or similar buy links. Mention products by name only. The only outbound links allowed are internal links to our own articles and the owned-product link described above (if one is given).
 ${productCtaBlock}
 - Do not use any of these words or phrases anywhere in the article: ${BANNED_PHRASES.join(', ')}.
 - Do not use hypothetical-scenario openers like "Picture this" or "Imagine sitting at your desk."
@@ -608,7 +608,9 @@ async function main() {
   const dated = forceRealPubDate(cleanedRaw);
   const quoted = quoteFrontmatterFields(dated);
   const linkFix = fixInternalLinks(quoted, existingPosts);
-  const cleaned = linkFix.markdown;
+  const retail = stripRetailLinks(linkFix.markdown);
+  const cleaned = retail.markdown;
+  for (const r of retail.removed) console.log(`[retail-guard] removed ${r}`);
   for (const c of linkFix.changes) console.log(`[link-guard] ${c}`);
   const title = extractTitle(cleaned);
   let slug = slugify(title);
