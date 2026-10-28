@@ -65,7 +65,7 @@ If these points don’t raise any red flags for you, the Aothia remains a strong
 ## How to Make the Most of Your New Desk Pad
 
 - **Layer Smartly** – Place a thin mouse pad on top of the Aothia if you prefer a textured mouse surface while still keeping the waterproof base.
-- **Pair with Cable Management** – Combine the pad with a cable organizer (see our guide on [What to Know About USB‑C Multiport Hubs with PD Charging](/blog/what-to-know-about-usb-c-multiport-hubs-with-pd-charging/)) to keep cords tidy and the desk looking clean.
+- **Pair with Cable Management** – Combine the pad with a cable organizer (see our guide on [What to Know About USB‑C Multiport Hubs with PD Charging](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/)) to keep cords tidy and the desk looking clean.
 - **Add a Matching Mouse Pad** – For a cohesive look, pair it with a wireless charging mouse pad (read our [Buying Guide to the Best Wireless Charging Mouse Pad](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/)).
 
 ## Bottom Line

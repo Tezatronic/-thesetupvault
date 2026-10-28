@@ -26,7 +26,7 @@ A solid desktop acts as an insulator, trapping heat against the bottom chassis. 
 
 ### Port Clearance and Peripheral Management
 
-MacBooks cluster their ports tightly along the left and right edges. If a stand's retaining hooks or side brackets curve too high, they can block the MagSafe charging port or prevent a USB-C cable from seating flush. The retaining lip should be shallow enough to clear your wrists if you reach for the trackpad, yet deep enough to hold the tapered front edge of the MacBook securely. This clearance also makes it easier to route clean cabling to a [USB-C hub with PD charging for your home office](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-your-home-office/) tucked behind the stand.
+MacBooks cluster their ports tightly along the left and right edges. If a stand's retaining hooks or side brackets curve too high, they can block the MagSafe charging port or prevent a USB-C cable from seating flush. The retaining lip should be shallow enough to clear your wrists if you reach for the trackpad, yet deep enough to hold the tapered front edge of the MacBook securely. This clearance also makes it easier to route clean cabling to a [USB-C hub with PD charging for your home office](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/) tucked behind the stand.
 
 ## Key Factors to Evaluate in an Aluminum Laptop Stand
 
