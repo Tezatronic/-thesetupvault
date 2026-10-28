@@ -59,7 +59,7 @@ Before placing your screen, inspect the underside of the stand's legs. The anti-
 ### 3. Maintain Center-of-Gravity Alignment
 With a platform measuring 14.6 x 9.3 inches, the WALI stand accommodates the factory base of virtually every standard monitor. Ensure your monitor’s factory base sits centered on the metal plate. Letting the monitor base overhang the front edge shifts the center of gravity, concentrating load on the front two feet rather than distributing it across all four.
 
-If your workspace includes both a laptop and an external screen, pairing this monitor setup with an [adjustable laptop stand for a home office](/blog/the-best-adjustable-laptop-stand-for-a-home-office-a-buying-guide-1788968427022/) creates an aligned dual-screen layout without requiring secondary clamps.
+If your workspace includes both a laptop and an external screen, pairing this monitor setup with an [adjustable laptop stand for a home office](/blog/the-best-adjustable-laptop-stand-for-a-home-office-a-practical-buying-guide-1788968427022/) creates an aligned dual-screen layout without requiring secondary clamps.
 
 ## Planning Your Entire Surface Layout
 
