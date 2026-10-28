@@ -238,6 +238,17 @@
         "usb hub home office video calls"
       ],
       "rationale": "Targets the specific workflow of video‑conferencing gear, a search intent not addressed by existing buying, comparison, or troubleshooting guides."
+    },
+    {
+      "angle": "usb-hub-for-automated-backups",
+      "focus": "How to use the 9‑Port USB 3.2 hub as a central hub for connecting multiple external drives and setting up automated backup routines in a home‑office environment",
+      "keywords": [
+        "usb hub backup",
+        "external hard drive hub",
+        "automated backups home office",
+        "usb hub data archiving"
+      ],
+      "rationale": "Focuses on backup workflow and data management, a search intent not covered by existing guides"
     }
   ],
   "webcam": [
