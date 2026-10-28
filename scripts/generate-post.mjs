@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fixInternalLinks } from './lib/fix-internal-links.mjs';
 
 const PRODUCTS_PATH = path.join('scripts', 'products.json');
 const USED_PATH = path.join('scripts', 'used-angles.json');
@@ -605,7 +606,10 @@ async function main() {
   const raw = await callAI(prompt);
   const cleanedRaw = cleanOutput(raw);
   const dated = forceRealPubDate(cleanedRaw);
-  const cleaned = quoteFrontmatterFields(dated);
+  const quoted = quoteFrontmatterFields(dated);
+  const linkFix = fixInternalLinks(quoted, existingPosts);
+  const cleaned = linkFix.markdown;
+  for (const c of linkFix.changes) console.log(`[link-guard] ${c}`);
   const title = extractTitle(cleaned);
   let slug = slugify(title);
 
