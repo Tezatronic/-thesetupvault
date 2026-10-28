@@ -61,7 +61,7 @@ If those points are deal‑breakers for you, consider a webcam that offers manua
 
 A webcam works best when the rest of your hardware supports it. Here are a couple of quick wins:
 
-* **USB‑C Multiport Hub** – If your laptop only has USB‑C ports, a hub with Power Delivery ensures the webcam gets enough power while you keep your charger connected. Check out our guide on [What to Know About USB‑C Multiport Hubs with PD Charging for Your Home Office](/blog/what-to-know-about-usb-c-multiport-hubs-with-pd-charging-for-your-home-office/).
+* **USB‑C Multiport Hub** – If your laptop only has USB‑C ports, a hub with Power Delivery ensures the webcam gets enough power while you keep your charger connected. Check out our guide on [What to Know About USB‑C Multiport Hubs with PD Charging for Your Home Office](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/).
 * **Wireless Charging Mouse Pad** – A tidy surface reduces visual clutter during video calls. Our review of the best wireless charging mouse pad explains why a clean desk can improve the perception of professionalism. See the details here: [Your Buying Guide to the Best Wireless Charging Mouse Pad for a Seamless Desk Setup](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/).
 
 These accessories complement the C960 nicely, creating a streamlined, functional workspace.

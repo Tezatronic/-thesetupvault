@@ -559,6 +559,16 @@
       "source": "/blog/what-to-know-about-usb-c-multiport-hubs-with-pd-charging",
       "destination": "/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups",
       "permanent": true
+    },
+    {
+      "source": "/blog/the-best-adjustable-laptop-stand-for-a-home-office-a-buying-guide-1788968427022",
+      "destination": "/blog/the-best-adjustable-laptop-stand-for-a-home-office-a-practical-buying-guide-1788968427022/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-to-know-about-usb-c-multiport-hubs-with-pd-charging-for-your-home-office",
+      "destination": "/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/",
+      "permanent": true
     }
   ]
 }
