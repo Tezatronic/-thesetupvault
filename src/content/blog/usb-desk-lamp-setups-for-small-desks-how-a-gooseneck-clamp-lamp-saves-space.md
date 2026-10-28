@@ -6,8 +6,6 @@ pubDate: 2026-09-11
 
 A USB‑powered gooseneck clamp lamp is the most space‑efficient lighting solution for a small desk.  
 
-[Check current price](https://amzn.to/4u8K3J8)
-
 When you’re working at a compact surface—think a 24‑inch laptop table or a narrow kitchen counter—every square inch counts. Traditional desk lamps that sit on the surface eat up valuable real estate and often require a dedicated power outlet, which can be scarce on a cramped desk. A USB desk lamp that clamps to the edge of the work surface eliminates both problems: it draws power directly from a USB port (or the included 5 V/3 A adapter) and frees up the tabletop for keyboards, notebooks, and coffee mugs.
 
 ## Why a USB Desk Lamp Works So Well in Tiny Setups
@@ -55,8 +53,6 @@ The Airlonv lamp checks every box for a small‑desk setup:
 
 From a practical standpoint, the lamp’s compact footprint and flexible arm make it easy to tuck into a corner or attach to a monitor stand. I’ve used it on a 30 cm wide desk in a home office that also houses a wireless charging mouse pad and a USB‑C hub; the lamp never interferes with other accessories, and the USB cable stays neatly routed along the edge of the desk.
 
-[Check current price](https://amzn.to/4u8K3J8)
-
 ## Potential Drawbacks
 
 - **Clamp size limitation** – The metal clamp works up to 2.36 inches thick, so it won’t fit on very thick workbenches or industrial‑style desks. If your surface exceeds that, you’ll need a separate desk‑mount bracket.  
@@ -64,8 +60,6 @@ From a practical standpoint, the lamp’s compact footprint and flexible arm mak
 - **No built‑in USB hub** – The lamp supplies power but doesn’t provide extra USB ports, so you’ll still need a separate hub if you want to charge multiple devices.
 
 If you need a hub, our article on **[USB‑C multiport hubs with PD charging](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/)** walks through the best options for a tidy desk.
-
-[Check current price](https://amzn.to/4u8K3J8)
 
 ## How to Install the Lamp on a Small Desk
 
@@ -80,4 +74,3 @@ These steps take under two minutes, and once set up the lamp stays exactly where
 
 For anyone squeezed onto a narrow tabletop, a USB‑powered clamp lamp like the Airlonv LED Desk Lamp offers the perfect blend of space‑saving design, flexible lighting, and plug‑and‑play convenience. It eliminates the need for an extra outlet, frees up precious desk surface, and provides a wide range of light temperatures to suit any task. While it won’t replace a high‑wattage floor lamp in a bright room, it more than covers the lighting needs of a typical home‑office nook.
 
-[Check current price](https://amzn.to/4u8K3J8)

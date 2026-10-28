@@ -17,8 +17,6 @@ Minimalist desks thrive on visual simplicity: a few essential tools, plenty of n
 
 Because the trays are open, you can see the contents at a glance, which reduces the temptation to pile papers on top of each other—a common source of visual clutter.
 
-[Check current price](https://amzn.to/4mSzw2B)
-
 ## Placement Strategies for a Clean Desk Look  
 
 ### 1. Anchor It Near Your Primary Work Zone  
@@ -69,4 +67,3 @@ Now that you’ve integrated a mesh paper organizer into a minimalist desk, you 
 
 A mesh paper organizer with a handle offers the perfect blend of function and form for a minimalist desk. Its open‑grid construction, modest size, and portable handle let you store essential paperwork while preserving the clean, airy look that defines a clutter‑free workspace. Pair it with thoughtful cable management, a low‑profile laptop stand, and a simple desk pad, and you’ll have a cohesive setup that feels both intentional and effortless.
 
-[Check current price](https://amzn.to/4mSzw2B)

@@ -51,8 +51,6 @@ If you’re already using a USB‑powered desk fan, the Lamicall stand complemen
 
 The Lamicall Adjustable Laptop Stand delivers a noticeable cooling advantage without adding moving parts or extra power consumption. Its height and angle flexibility, combined with an aluminum body, make it a solid choice for anyone who runs demanding software, streams video, or simply wants a quieter workspace. The modest price point and sturdy build also mean you get a durable platform that will last through years of daily use.
 
-[Check current price](https://amzn.to/48Uka7O)
-
 ## Next Steps for a Complete Desk Layout
 
 Once you’ve secured better cooling, you might want to think about the overall flow of your workstation—monitor placement, cable routing, and accessory positioning all affect ergonomics and heat management. A good way to visualize the whole setup before buying more pieces is to use a planning tool. Our own [Desk Setup Planner](/go/desk-planner/) can help you map out the layout and avoid costly trial‑and‑error.

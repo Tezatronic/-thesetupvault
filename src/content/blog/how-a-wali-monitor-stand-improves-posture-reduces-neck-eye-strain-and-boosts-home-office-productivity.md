@@ -28,8 +28,6 @@ The WALI stand is a compact metal shelf platform with anti‑skid rubber pads. I
 
 By simply placing your monitor on the stand, you instantly align your line of sight with the top of the screen. That small change can reduce neck tension by up to 30 % according to ergonomic studies, and it also encourages a more upright seated posture.
 
-[Check current price](https://amzn.to/48o5Hko)
-
 ### Real‑World Impact on Neck Strain
 
 I switched to the WALI stand after a month of persistent neck soreness. Within a week, the ache faded noticeably. The reason is straightforward: the stand removes the need to crane your neck forward. When the monitor is at eye level, the head can sit directly over the spine, which:
@@ -81,4 +79,3 @@ If you have a dual‑monitor setup or need a highly adjustable height range, a m
 
 A modest lift of your screen can transform the way you work. The **WALI Computer Monitor Stand** delivers a sturdy, anti‑skid platform that raises your monitor to an ergonomic height, easing neck and eye strain while freeing up desk space for a more focused workflow. It’s a low‑cost, low‑effort upgrade that pays off in comfort and productivity.
 
-[Check current price](https://amzn.to/48o5Hko)

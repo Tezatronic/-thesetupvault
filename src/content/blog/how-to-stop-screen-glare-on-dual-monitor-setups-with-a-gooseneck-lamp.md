@@ -43,8 +43,6 @@ A bright light in a dark room creates perceived glare even if no light physicall
 - Use the stepless dimming (from 1% to 100%) to match the lamp's output to the ambient luminance of your monitors. Powered by 10W via an included 5V/3A adapter, the Airlonv produces ample light across its 100 LED beads without over-saturating the desk.
 - Adjust the color temperature range between 2700K and 6500K. For daytime productivity, match the lamp to your monitors (typically 5000K to 6500K). At night, dropping down toward 2700K to 3000K softens visual fatigue.
 
-[Check current price](https://amzn.to/4u8K3J8)
-
 ## Key Alignment Tactics for Difficult Setups
 
 ### Curved Monitors
@@ -74,4 +72,3 @@ While an overhead gooseneck clamp light solves the dual-monitor coverage problem
 
 Screen glare on dual-monitor setups is an angle problem, not a brightness problem. By lifting the light source above your screens and adjusting the pitch so the light falls strictly onto the desk, you eliminate reflections while keeping your workspace legible. The flexibility of a gooseneck arm combined with the 60,000-hour lifespan of a wide LED light bar provides a stable, glare-free workspace for years of daily use.
 
-[Check current price](https://amzn.to/4u8K3J8)

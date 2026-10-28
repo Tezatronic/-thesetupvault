@@ -29,8 +29,6 @@ That 5.7-to-8.1-inch range is the critical window for dual-screen matching. Most
 
 Additionally, the stand features 360-degree base rotation. In a dual-screen configuration, you rarely want your laptop facing straight forward if it sits off to the side; you want it angled slightly inward toward your peripheral vision (typically between 30 and 45 degrees inward). The integrated swivel lets you tweak the viewing angle instantly without scraping the base feet across your desk surface. With a weight capacity of up to 11 lbs (5 kg) and support for laptop sizes from 10 to 17.3 inches, it handles standard thin-and-light ultrabooks up to heavyweight mobile workstations.
 
-[Check current price](https://amzn.to/48Uka7O)
-
 ## Step-by-Step: Calibrating Your Dual-Screen Height and Angle
 
 Getting a clean, gap-free transition between your laptop and monitor involves both physical positioning and software configuration. Here is the best sequence to follow:
@@ -71,4 +69,3 @@ Dialing in screen heights is only one piece of building an efficient, fatigue-fr
 
 A disjointed multi-display layout introduces unnecessary friction into everyday desk work. By combining a reliable external monitor with an adjustable stand that lifts within that sweet spot of 5.7 to 8.1 inches, you get the expansive utility of two screens without the physical penalties of bad posture and discontinuous mouse tracking.
 
-[Check current price](https://amzn.to/48Uka7O)

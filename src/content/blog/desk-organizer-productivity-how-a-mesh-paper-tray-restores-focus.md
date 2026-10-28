@@ -52,8 +52,6 @@ Place materials you need regularly but do not need to alter: blank letterhead, f
 ### Tier 5 (Bottom Tray): Outgoing, Archive, or Blank Paper
 Reserve the bottom tier for outgoing mail ready for the post office, documents queued for digitizing and shredding, or a small supply of standard printer paper. 
 
-[Check current price](https://amzn.to/4mSzw2B)
-
 ## Practical Home Office Efficiency Tips
 
 Setting up trays is only the mechanical half of the equation; building habits around the organizer keeps your focus sharp throughout the week.
@@ -87,4 +85,3 @@ Desk clutter is rarely a failure of willpower; it is usually a symptom of a miss
 
 Deploying a structured 5-tier iron mesh unit with dedicated processing categories gives every document a distinct stage—clearing your working perimeter so you can focus entirely on the task in front of you.
 
-[Check current price](https://amzn.to/4mSzw2B)

@@ -13,8 +13,6 @@ When you need a tidy, transportable filing system that fits in a coffee‑shop b
 - **Five open‑front trays** give you instant visual access to documents, pens, chargers, and even a spare mouse.  
 - **Compact footprint** (12.79 × 9.25 × 11.22 inches) slides under most café tables and fits snugly in a standard laptop bag.
 
-[Check current price](https://amzn.to/4mSzw2B)
-
 Below is a step‑by‑step plan to convert this simple paper organizer into a portable office hub that works wherever you set up.
 
 ## Step 1: Define Your Mobile Essentials  
@@ -79,4 +77,3 @@ Now that you have a portable filing system, you might want to map out the rest o
 
 By following these steps, freelancers and remote employees can turn a modest mesh paper organizer into a reliable, travel‑ready filing kit. It’s lightweight, easy to set up, and keeps the essentials you need right at your fingertips—whether you’re at a coffee shop, a co‑working hub, or swapping between home offices.
 
-[Check current price](https://amzn.to/4mSzw2B)

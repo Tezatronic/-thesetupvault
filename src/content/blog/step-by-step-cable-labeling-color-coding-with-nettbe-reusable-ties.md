@@ -22,8 +22,6 @@ Nettbe’s reusable cable ties are made from sturdy nylon and feature a hook‑a
 
 Because they’re adjustable and reusable, you never need scissors or a cutter. When a cable is added or removed, simply slide the tie open, reposition, and close it again.
 
-[Check current price](https://amzn.to/3R3xa4Q)
-
 ## Step‑by‑Step Guide to Labeling & Color‑Coding
 
 ### 1. Take Inventory of Every Cable
@@ -105,7 +103,5 @@ If you’ve mastered basic labeling and want a full‑scale plan that matches yo
 Color‑coding and labeling with Nettbe reusable cable ties turns a chaotic jungle of cords into a clear, maintainable system. The process is inexpensive, reversible, and scales from a single‑monitor home office to a multi‑device power‑user rig. By investing a few minutes now, you’ll save hours of frustration later when troubleshooting or upgrading.
 
 Ready to buy the ties?  
-
-[Check current price](https://amzn.to/3R3xa4Q)
 
 Happy labeling!

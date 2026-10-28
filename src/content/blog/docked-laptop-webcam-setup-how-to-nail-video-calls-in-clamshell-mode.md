@@ -29,8 +29,6 @@ Not every webcam will work smoothly with a docked rig. Here’s what to look for
 | **USB plug‑and‑play** | No extra drivers; just plug into your dock’s USB‑C hub and you’re ready. |
 | **Privacy cover** | Simple slide‑over cover for peace of mind when the camera isn’t in use. |
 
-[Check current price](https://amzn.to/42tYAn8)
-
 ## Step‑by‑Step Docked Laptop Webcam Setup
 
 ### 1. Connect the Webcam to Your Dock
@@ -90,8 +88,6 @@ Run a quick test call with a colleague or use the built‑in camera preview in y
 ## Final Recommendation
 
 For anyone running a laptop in clamshell mode on a dock, the EMEET C960 offers a plug‑and‑play solution that delivers crisp 1080p video, reliable omnidirectional audio, and a privacy cover—all without the hassle of driver installations. Pair it with a solid monitor mount, good desk lighting, and tidy cable management, and you’ll have a video‑call setup that feels as polished as a dedicated desktop workstation.
-
-[Check current price](https://amzn.to/42tYAn8)
 
 ---
 

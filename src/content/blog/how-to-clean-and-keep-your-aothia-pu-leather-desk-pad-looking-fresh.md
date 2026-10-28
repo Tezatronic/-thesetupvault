@@ -16,8 +16,6 @@ Below is a complete, no‑fluff maintenance routine that will help you protect t
 
 Because the pad is both waterproof and non‑absorbent, everyday spills don’t soak through, but they can still leave marks if not addressed promptly. The backing is designed to stay put, yet it can lift slightly when the pad is exposed to humidity or heavy weight, which is why a regular flattening routine matters.
 
-[Check current price](https://amzn.to/4tyDIa7)
-
 ## Daily Care: The 2‑Minute Wipe‑Down
 
 1. **Gather the right tools** – a clean microfiber cloth, a spray bottle of room‑temperature water, and (optional) a few drops of gentle dish soap.  
@@ -105,4 +103,3 @@ Now that your desk pad is clean and flat, you might be thinking about where to p
 
 Keeping your Aothia PU leather desk pad in top condition isn’t a chore—it’s a few minutes a week that protects your investment and keeps your mouse gliding smoothly.
 
-[Check current price](https://amzn.to/4tyDIa7)

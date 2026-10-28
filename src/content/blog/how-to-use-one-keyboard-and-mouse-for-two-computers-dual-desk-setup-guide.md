@@ -38,8 +38,6 @@ A practical dual-computer peripheral needs to handle varied tasks. During work h
 
 The keyboard provides a full-size layout complete with a dedicated numeric keypad and 12 multimedia shortcut keys. Both the keyboard and mouse feature quiet keystrokes and mouse clicks alongside an auto-sleep power saving mode, which keeps your desk quiet during voice calls and prevents you from draining battery power when one computer sits idle.
 
-[Check current price](https://amzn.to/3Ren4hI)
-
 ## Step-by-Step: Wiring One Keyboard and Mouse for Two Computers
 
 Setting up a dual-system workflow using a single-receiver combo takes less than ten minutes. Here is the standard wiring layout:
@@ -71,4 +69,3 @@ While using a single-receiver wireless combo with a hardware switcher solves cro
 
 You do not need an expensive, complex multi-monitor KVM matrix to eliminate desk clutter. For remote workers juggling a corporate laptop alongside a personal desktop, pairing a single-receiver 2.4GHz wireless combo with a push-button USB switch offers the most dependable, IT-proof way to run one keyboard and mouse across two computers.
 
-[Check current price](https://amzn.to/3Ren4hI)

@@ -29,8 +29,6 @@ The Lamicall stand is built from aluminum alloy, giving it a solid, stable feel 
 
 By simply sliding the stand to its highest setting and tilting the screen a few degrees back, the webcam moves from a low, unflattering position to a natural eye‑level view.
 
-[Check current price](https://amzn.to/48Uka7O)
-
 ## Setting Up the Stand for a Professional Look
 
 ### 1. Position the Stand
@@ -69,8 +67,6 @@ For those who need to charge multiple devices while on a call, consider a USB‑
 ## Is This the Right Stand for You?
 
 If your primary goal is a cleaner, more ergonomic video‑call setup and you already work from a dedicated desk, the Lamicall Adjustable Laptop Stand checks all the boxes. It raises the webcam, lets you fine‑tune the screen angle, and stays stable under the weight of a full‑size laptop. For anyone who spends a few hours a day on Zoom or Teams, the ergonomic payoff outweighs the modest trade‑off in portability.
-
-[Check current price](https://amzn.to/48Uka7O)
 
 ## Next Steps: Plan the Whole Workspace
 

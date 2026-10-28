@@ -28,8 +28,6 @@ Nettbe’s hook‑and‑loop ties are made from sturdy nylon, so they stay snug 
 | **Create vertical channels** | Tying cables to the back of a monitor stand or desk leg opens a vertical shaft for hot air to rise naturally. |
 | **Easy re‑routing** | When you add a new GPU or swap a monitor, you can quickly untie and reposition cables, preserving the airflow plan. |
 
-[Check current price](https://amzn.to/3R3xa4Q)
-
 ## Step‑by‑Step Airflow‑Focused Cable Routing
 
 Below is a practical workflow you can follow on any desk, whether you’re using a single monitor or a dual‑screen rig.
@@ -90,4 +88,3 @@ If you’ve followed the steps above and want a more detailed, step‑by‑step 
 
 [Pick the setup profile that matches your situation (minimalist, dual‑screen, power user, or hybrid) and follow that profile's cable‑routing plan and checklist](/go/cable-guide/)
 
-[Check current price](https://amzn.to/3R3xa4Q)

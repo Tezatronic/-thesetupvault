@@ -25,8 +25,6 @@ Because the lamp runs on a 10 W USB adapter (included), you can power it from 
 3. **Choose the right color temperature** – For most indoor calls, 4000 K to 5000 K gives a neutral daylight feel. If you’re in a room with warm décor, dial it down to 3500 K to blend with the surroundings.  
 4. **Set the brightness** – Start at around 30 % and increase until your face is evenly lit without blowing out the background. The stepless dimming means you can fine‑tune it in 1 % increments.  
 
-[Check current price](https://amzn.to/4u8K3J8)
-
 ### Positioning the Lamp: Key Light vs. Fill Light
 
 A single lamp can serve as either a **key light** (the main source) or a **fill light** (softens shadows from another source). Here’s how to decide:
@@ -65,4 +63,3 @@ A gooseneck LED lamp is a low‑cost, high‑impact upgrade for anyone who spend
 
 If you’re ready to improve your video presence without buying a full lighting rig, the Airlonv LED Desk Lamp with Gooseneck Clamp is a solid choice.
 
-[Check current price](https://amzn.to/4u8K3J8)

@@ -38,8 +38,6 @@ With data transfer speeds up to 10Gbps across its primary channels, port layout 
 ### Dedicated Device Charging
 * **2 USB-C PD 45W Charging Ports:** These two ports are designed specifically for high-speed device charging. They are wired for supplying juice to your smartphone, wireless headphone charging case, or a tablet used as a secondary meeting notes screen.
 
-[Check current price](https://amzn.to/4eCGsyS)
-
 Consolidating your gear this way turns a messy cluster of cables into an organized desk hub. Instead of plugging six individual cables into your computer every morning, your webcam, mic, headphones, lighting, and storage connect cleanly through a single unified workstation access point.
 
 ## Cable Routing and Workspace Stability
@@ -65,4 +63,3 @@ If your daily routine involves client presentations, internal standups, or live 
 
 The intpw 9-Port USB 3.2 Hub (YH6AC) provides the port density, structural stability, and 65W electrical backbone needed to run a professional webcam, external microphone, wireless headphones, and desk accessories simultaneously. By centralizing your hardware through a single dedicated desktop hub, you eliminate meeting dropouts and keep your desk tidy and functional.
 
-[Check current price](https://amzn.to/4eCGsyS)

@@ -20,8 +20,6 @@ By lifting the monitor, the stand frees the area directly beneath it for:
 * **Paperwork and notebooks** – a small stack of notes or a planner fits comfortably, keeping reference material within arm’s reach.
 * **Cable routing** – the raised height gives you a natural bend point for power and video cables, reducing clutter and making it easier to plug and unplug devices.
 
-[Check current price](https://amzn.to/48o5Hko)
-
 ### How It Improves Workflow
 
 1. **Clear Mouse Movement** – With the monitor no longer blocking the lower part of the desk, you get a full‑size mouse pad area, which translates to smoother cursor control.
@@ -58,4 +56,3 @@ Once you’ve reclaimed space with the monitor stand, the next step is to map ou
 
 A small‑desk monitor stand like the WALI Computer Monitor Stand offers a straightforward, low‑cost method to gain precious surface area without sacrificing stability or aesthetics. By lifting your screen, you unlock a shelf that can host keyboards, notebooks, and accessories, streamline cable routes, and improve overall workflow. If you’re ready to make the most of a tight workspace, this space‑saving riser is a practical first upgrade.
 
-[Check current price](https://amzn.to/48o5Hko)

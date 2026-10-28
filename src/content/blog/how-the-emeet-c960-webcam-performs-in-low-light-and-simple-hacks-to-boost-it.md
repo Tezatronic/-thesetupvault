@@ -10,8 +10,6 @@ The EMEET C960 handles low‑light surprisingly well, delivering clear 1080p vid
 
 Plug the USB connector into any modern computer and the webcam is ready—no drivers, no extra software. It streams at 1080p and 30 fps, and the built‑in dual omnidirectional microphones pick up voices clearly up to about 2.4 meters away. The 90‑degree field of view is wide enough for a typical desk‑to‑shoulder framing without making you look stretched. A privacy cover slides over the lens when you’re not on a call, which is a nice touch for anyone concerned about accidental exposure.
 
-[Check current price](https://amzn.to/42tYAn8)
-
 ### How It Actually Looks in a Dim Room  
 
 I tested the C960 in a room lit only by a single LED strip that was set to a warm 300 lux level—roughly the lighting you’d find after the sun goes down or in a small home office without a dedicated lamp. The image stayed reasonably sharp; skin tones didn’t turn overly gray, and the background stayed distinguishable. The webcam’s sensor does a decent job of amplifying the limited light, but you’ll notice a slight softening of fine details and a hint of noise in the darkest corners. That’s expected for a webcam in this price range, but it’s far better than many budget models that turn the picture into a grainy silhouette.
@@ -58,4 +56,3 @@ I use the C960 for my daily 6 pm stand‑up with a remote team. My office has 
 
 For anyone who works after sunset, streams from a modestly lit room, or simply wants a reliable plug‑and‑play webcam without spending a fortune, the C960 is a solid choice. Its 1080p output stays clear enough in low light, especially when you pair it with a few inexpensive lighting tricks. It isn’t a professional‑grade broadcast camera, but it punches well above its price point for everyday video calls and casual streaming.
 
-[Check current price](https://amzn.to/42tYAn8)

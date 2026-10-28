@@ -35,8 +35,6 @@ Dragging an optical mouse over bare laminate generates a persistent raspy hum. T
 ### 3. Stabilizing the Desk Surface
 Hard plastic feet on keyboards often shift slightly under uneven pressure, producing small plastic-on-wood rattles. Because the Aothia desk pad features a non-slip backing, it anchors your peripherals in place. Keystrokes no longer shift the keyboard housing, eliminating secondary rattles and buzzes.
 
-[Check current price](https://amzn.to/4tyDIa7)
-
 ## Choosing the Right Size for Sound Reduction
 
 To achieve meaningful desk pad sound reduction, both your keyboard and your mouse must sit entirely on the padded surface. If your keyboard sits halfway on and halfway off the pad, vibration will leak directly into the desk surface from the unpadded side, defeating the purpose of acoustic isolation.
@@ -69,4 +67,3 @@ Relying on a noise dampening desk pad alone will not eliminate every sound in yo
 
 By eliminating surface resonance, the Aothia PU Leather Desk Pad takes the acoustic edge off long typing sessions and keeps your shared office or video calls quiet.
 
-[Check current price](https://amzn.to/4tyDIa7)

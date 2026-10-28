@@ -53,8 +53,6 @@ Unlike a standard rubber mat, an integrated charging mat holds thin copper induc
 
 The TopMade Wireless Charging Mouse Pad weighs 1.6 lbs and houses hardware capable of up to 15W fast Qi wireless charging (which requires a 9V/3A power adapter, not included in the box). While the rubber underside and top materials provide structural protection, the electronic zone remains vulnerable to physical stress and moisture ingress.
 
-[Check current price](https://amzn.to/3R36ukU)
-
 To keep those components functioning for years:
 - **Never fold or roll the pad tightly across the charging zone.** Folding can crack solder joints or pinch the wire leads feeding the transmitter.
 - **Do not rest hot mugs directly on the coil.** Qi coils already produce mild heat while transferring power. Introducing heat from a boiling cup of tea can trip internal thermal safety switches or degrade electronic components.
@@ -72,4 +70,3 @@ While an integrated charging desk pad cleans up cable clutter, there are real tr
 
 If you understand those operational boundaries and take two minutes to spot-clean with a barely damp cloth once every few weeks, keeping your desk pad clean and fully functional is straightforward.
 
-[Check current price](https://amzn.to/3R36ukU)

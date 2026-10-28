@@ -6,8 +6,6 @@ pubDate: 2026-09-06
 
 If you want a sturdy, heat‑dissipating hub for a laptop, an **aluminum USB hub** beats a plastic one in durability, feel, and thermal performance.  
 
-[Check current price](https://amzn.to/4eCGsyS)
-
 ### Why the material matters
 
 When you’re building a desk that will see daily plugging and unplugging, the hub’s chassis is more than a cosmetic choice. Plastic housings can warp over time, especially when the hub is left on for hours and the internal components heat up. Aluminum, on the other hand, acts like a tiny heat sink. It spreads warmth across a larger surface, keeping the silicon inside cooler and reducing the chance of throttling during long file transfers.
@@ -31,8 +29,6 @@ Aesthetic-wise, many modern desk setups favor a metal look that matches laptop b
 
 The **intpw 9‑Port USB 3.2 Hub** checks almost every box on the aluminum side. It offers a balanced port mix—1 USB‑C 3.2, 2 USB‑A 3.2, 4 USB‑A 3.0, and 2 USB‑C PD 45 W charging ports—delivering up to 10 Gbps where it counts. The included 65 W (20 V/3.25 A) power adapter and a generous 3.3‑foot cable mean you can place the hub wherever it’s most convenient on your desk without hunting for a power outlet.
 
-[Check current price](https://amzn.to/4eCGsyS)
-
 ### Our pick: intpw 9‑Port USB 3.2 Hub
 
 - **Port configuration** – Nine ports total, covering the most common peripherals: external SSDs, keyboards, mice, and a couple of fast‑charging USB‑C ports for phones or tablets.  
@@ -43,15 +39,11 @@ The **intpw 9‑Port USB 3.2 Hub** checks almost every box on the aluminum side.
 
 One caveat: the two PD charging ports are optimized for phones and tablets. They’re not recommended for powering a laptop, so you’ll still need your laptop’s own charger plugged into the wall.
 
-[Check current price](https://amzn.to/4eCGsyS)
-
 ### Potential Drawbacks
 
 - **PD ports not laptop‑ready** – If you were hoping to charge a laptop through the hub, you’ll need a separate charger. The hub’s PD output is limited to 45 W per port, which is fine for most phones but falls short for many modern laptops.  
 - **Footprint** – The aluminum chassis, while sturdy, is larger than the tiniest plastic “mini” hubs. If you have an ultra‑compact desk, you may need to allocate a bit more surface area.  
 - **Cost** – Aluminum builds usually carry a premium. If you’re on a tight budget and only need a few ports, a basic plastic hub could be cheaper, though you may end up replacing it sooner.
-
-[Check current price](https://amzn.to/4eCGsyS)
 
 ### How to integrate an aluminum hub into your desk setup
 
@@ -64,4 +56,3 @@ One caveat: the two PD charging ports are optimized for phones and tablets. They
 
 When the choice comes down to aluminum versus plastic for a USB hub, the metal option wins on durability, heat management, and a premium feel that matches a professional desk setup. The **intpw 9‑Port USB 3.2 Hub** embodies those advantages while offering a versatile port mix and a solid power adapter. If you’re building a laptop‑centric workstation and value a hub that will stay cool and sturdy for years, the aluminum model is the sensible investment.
 
-[Check current price](https://amzn.to/4eCGsyS)

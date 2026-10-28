@@ -46,8 +46,6 @@ A full-sized household fan creates excessive draft, blows loose papers around, a
 
 The KIMMOO Rechargeable USB Desk Fan fits this specific role cleanly. Measuring 5.5 x 3.11 x 6.58 inches and weighing just 0.92 lbs (418g), its compact footprint lets you wedge it into tight desk spaces right behind a laptop stand or tucked beside a monitor arm without crowding your mouse space.
 
-[Check current price](https://amzn.to/4wpAWWI)
-
 What makes this fan practical for thermal management is its stepless speed dial. Rather than being stuck between three coarse presets—where "Low" is too weak to move air past the stand and "High" sounds like a hair dryer—it offers 100 adjustable speed levels ranging from roughly 2000 to 2900 RPM. 
 
 At the lower end of the dial, noise drops to as low as 35 dB. That is quiet enough to run continuously during Zoom calls without software noise suppression picking up a drone. You can set the dial around the 20% to 30% mark to create a quiet, constant breeze across your laptop's underside during standard office tasks, or crank it toward the 2900 RPM ceiling when rendering high-resolution video or exporting large codebases.
@@ -72,4 +70,3 @@ Second, an external fan cannot resolve internal maintenance issues. If your comp
 
 For unibody laptops, docked setups, and elevated workstations that just need consistent thermal stability without a noisy, space-hogging cooling pad under the keyboard, a compact directed desk fan is one of the cleanest fixes available.
 
-[Check current price](https://amzn.to/4wpAWWI)

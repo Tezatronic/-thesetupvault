@@ -22,8 +22,6 @@ Below is a practical guide for positioning the **Airlonv LED Desk Lamp with Goos
 - **Clamp:** Metal, fits desktops up to 2.36 inches thick  
 - **Light bar:** 17 inches wide, standard size (1.81 × 17 × 35 inches)  
 
-[Check current price](https://amzn.to/4u8K3J8)
-
 ## Step‑by‑Step Positioning Guide
 
 ### 1. Attach the Lamp Securely
@@ -79,4 +77,3 @@ Positioning a gooseneck LED desk lamp correctly is a low‑cost, high‑impact w
 
 If you’ve nailed the lamp placement and want to take the next step—mapping out lighting, monitor, and accessory locations together—consider using **The Complete Desk Setup Planner** to design a cohesive layout that prevents you from adding lighting as an afterthought.
 
-[Check current price](https://amzn.to/4u8K3J8)

@@ -44,8 +44,6 @@ The mat is available in two distinct configurations:
 
 Choosing the large 31.5 x 15.7-inch model ensures that both your keyboard and your mouse rest on the exact same horizontal plane. When a keyboard sits on an elevated mat while a mouse rests on a lower desk surface (or vice versa), the asymmetry forces your shoulders to sit at unequal heights. A unified pad keeps your posture symmetrical from left to right.
 
-[Check current price](https://amzn.to/4tyDIa7)
-
 ## Setting Up Your Surface Zone
 
 Before dropping an oversized pad onto your desk, consider how your peripherals interact with the rest of your workstation. A pad that is too large will run into monitor riser legs, while one that is too small leaves your mouse cramped against the edge.
@@ -70,4 +68,3 @@ PU leather is resilient, easy to wipe down, and waterproof, but it is not memory
 
 Desk pad ergonomics come down to removing micro-annoyances that compound over an eight-hour shift. By taking the hard edge off your desk, stabilizing your keyboard, and providing an even glide surface for your mouse, the Aothia PU Leather Desk Pad Protector allows your upper body to maintain neutral, relaxed alignment without breaking your setup flow.
 
-[Check current price](https://amzn.to/4tyDIa7)

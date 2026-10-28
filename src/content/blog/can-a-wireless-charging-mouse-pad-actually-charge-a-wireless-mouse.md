@@ -50,8 +50,6 @@ To see how these specifications look in practice, consider the TopMade Wireless 
 
 Measuring 31.5 x 15.8 inches and weighing 1.6 lbs, it provides enough room for a full-sized keyboard and a mouse, with a dedicated Qi charging section integrated into the side. The surface blends leather, rubber, and weave cloth surface materials to balance smooth mouse tracking on one side with a finished, structured look on the other.
 
-[Check current price](https://amzn.to/3R36ukU)
-
 From a power standpoint, this mat provides up to 15W fast Qi wireless charging. That speed is ample for fast-charging compatible Android handsets or keeping an iPhone topped off during work hours. However, getting that top speed requires a 9V/3A power adapter, which is not included in the package. If you plug it into a standard low-power computer USB port, you will get significantly slower speeds.
 
 True to standard Qi limitations, it is not compatible with any Apple Watch model. If you want a dedicated charging spot specifically for an Apple Watch, you need a dedicated dock with an Apple-certified magnetic module rather than a flat desk pad.
@@ -85,4 +83,3 @@ Can a wireless charging desk mat charge your mouse? Only if you intentionally ow
 
 For the vast majority of desk workers, a charging desk mat should be treated as a large mouse surface paired with a phone-and-earbud charger. As long as you approach it with realistic expectations—and provide the required 9V/3A wall adapter—it remains one of the cleanest ways to keep your phone topped off without adding another cable to your desktop.
 
-[Check current price](https://amzn.to/3R36ukU)

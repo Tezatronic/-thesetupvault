@@ -6,8 +6,6 @@ pubDate: 2026-09-08
 
 **The KIMMOO Rechargeable USB Desk Fan is the best rechargeable USB desk fan for summer.** It combines a solid 3000 mAh battery, whisper‑quiet operation, and a compact footprint that fits on any desk without hogging space.
 
-[Check current price](https://amzn.to/4wpAWWI)
-
 ---
 
 ## Why a Battery‑Powered Desk Fan Is a Summer Essential
@@ -19,8 +17,6 @@ When the thermostat climbs above 80 °F, a desk fan becomes more than a comfor
 * Avoid the hum of a wall‑plugged unit that can interfere with video calls.
 
 If you already have a wireless charging mouse pad or a USB‑C hub on your desk, a USB‑powered fan slots in without adding extra adapters.
-
-[Check current price](https://amzn.to/4wpAWWI)
 
 ---
 
@@ -46,8 +42,6 @@ A sturdy plastic housing and a stable base prevent wobbling when you turn up the
 
 **Bottom line:** If you prioritize long runtime, low noise, fine speed control, and a compact design, the KIMMOO checks every box.
 
-[Check current price](https://amzn.to/4wpAWWI)
-
 ---
 
 ## The Recommendation: KIMMOO Rechargeable USB Desk Fan
@@ -72,8 +66,6 @@ The fan’s **adjustable speed dial** feels smooth, and the LED indicator shows 
 
 If you already use a **wireless charging mouse pad**, you’ll appreciate the extra USB port freed up for the fan. (See our guide on the best wireless charging mouse pad for a seamless desk setup.) A **silent wireless keyboard** pairs nicely, keeping overall desk noise low. (Read why a silent wireless keyboard belongs in your shared workspace.) And a **sturdy laptop stand** creates vertical space, making room for the fan without crowding your work surface. (Check out our practical laptop stand guide.)
 
-[Check current price](https://amzn.to/4wpAWWI)
-
 ---
 
 ## Potential Drawbacks
@@ -82,8 +74,6 @@ If you already use a **wireless charging mouse pad**, you’ll appreciate the ex
 * **Charging relies on a USB‑C power source:** If you’re using a laptop with limited USB‑C power delivery, you may need a dedicated wall charger for the fastest charge.
 
 These trade‑offs are typical for desk‑sized USB fans, and they’re outweighed by the convenience of cordless operation.
-
-[Check current price](https://amzn.to/4wpAWWI)
 
 ---
 
@@ -105,8 +95,6 @@ These trade‑offs are typical for desk‑sized USB fans, and they’re outweigh
 - ✅ USB‑C charging compatibility  
 
 If your checklist matches the KIMMOO specifications above, you’ve found a fan that will keep you cool without compromising your workflow.
-
-[Check current price](https://amzn.to/4wpAWWI)
 
 ---
 

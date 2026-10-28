@@ -46,8 +46,6 @@ The **KIMMOO Rechargeable USB Desk Fan** fits this specific need well because it
 
 At its lower range, it operates as low as 35 dB, blending easily into typical room ambient noise. Measuring 5.5 x 3.11 x 6.58 inches and weighing 0.92 lbs (418g), it takes up minimal space on crowded desks. Because it draws just 4.5W and houses a 3000 mAh battery rated for roughly 8.5 hours of runtime (with an approximate 2.5-hour recharge time via 5V/2A), you can unplug it entirely during meetings to eliminate ground-loop hum or cable clutter. If your desk already relies on [a powered USB hub for video conferencing gear](/blog/how-to-set-up-a-powered-usb-hub-for-video-conferencing-gear/), keeping the fan battery-powered removes another load from your peripheral hub.
 
-[Check current price](https://amzn.to/4wpAWWI)
-
 ## 3 Practical Tweaks to Eliminate Remaining Audio Artifacts
 
 Even with deliberate placement, small physical adjustments make a substantial difference in call quality.
@@ -74,4 +72,3 @@ While using a compact, low-noise fan solves call-quality issues, this approach h
 
 Taking ten minutes to audit your fan's angle relative to your microphone's polar pattern ensures you stay cool during long meeting blocks without forcing coworkers to listen to static and wind turbulence.
 
-[Check current price](https://amzn.to/4wpAWWI)

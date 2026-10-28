@@ -105,8 +105,6 @@ If the hub still misbehaves, it’s likely a hardware defect and you should cons
 
 The **intpw 9‑Port USB 3.2 Hub (YH6AC)** offers a balanced mix of ports: one USB‑C 3.2 data port, two USB‑A 3.2 ports, four USB‑A 3.0 ports, and two USB‑C PD ports that supply up to 45W for phones and tablets. Its aluminum unibody feels sturdy, and the 32‑degree angle keeps cables from bending sharply.
 
-[Check current price](https://amzn.to/4eCGsyS)
-
 Pair it with a reliable 65W power adapter (included) and the short 3.3‑foot cable for a tidy, high‑speed workstation.
 
 ---
@@ -135,4 +133,3 @@ Most USB hub frustrations boil down to three categories: **insufficient power, p
 
 If you’ve exhausted the checklist and still face issues, it’s time to reach out to the seller’s support or consider a different hub model that matches your power requirements.
 
-[Check current price](https://amzn.to/4eCGsyS)
