@@ -57,7 +57,7 @@ These limitations are worth noting if you frequently work in low‑light conditi
 3. **Enable silent mode** (the keyboard is silent by design, but you can further reduce sound by using a soft‑touch wrist rest).
 4. **Take advantage of multimedia keys** for quick volume or playback changes—especially handy when you’re sharing a conference room with others.
 
-For a smoother overall desk experience, consider pairing this combo with a wireless charging mouse pad or a cable‑management system. Our guide on [the best wireless charging mouse pad for a seamless desk setup](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/) walks you through options that complement silent input devices nicely.
+For a smoother overall desk experience, consider pairing this combo with a wireless charging mouse pad or a cable‑management system. Our guide on [the best wireless charging mouse pad for a seamless desk setup](/blog/buying-guide-choosing-the-best-wireless-charging-mouse-pad-for-your-desk-setup/) walks you through options that complement silent input devices nicely.
 
 ### Bottom Line
 

@@ -68,7 +68,7 @@ The stand is manufactured from aluminum alloy and weighs approximately 2.3 lbs, 
 
 Its structural capacity handles up to 11 lbs (5 kg), far exceeding what is needed for Apple laptops. This high threshold translates directly into hinge stiffness: once you set your viewing angle, it stays locked in place. The height adjusts continuously from 5.7 inches to 8.1 inches, while the tilt angle adjusts from 45 to 180 degrees. Coupled with a 360-degree rotating base plate, you can orient your MacBook precisely where your posture demands.
 
-To get the full ergonomic benefit from this arrangement, you should avoid typing directly on the elevated MacBook keyboard. Elevating your screen forces your hands into an unnatural, upward angle that strains your wrists. Instead, set the Lamicall stand at eye level and pair your laptop with a separate mouse and an external keyboard, such as a [silent wireless keyboard](/blog/why-a-silent-wireless-keyboard-belongs-in-your-shared-workspace/). This keeps your shoulders relaxed, elbows at 90 degrees, and neck aligned.
+To get the full ergonomic benefit from this arrangement, you should avoid typing directly on the elevated MacBook keyboard. Elevating your screen forces your hands into an unnatural, upward angle that strains your wrists. Instead, set the Lamicall stand at eye level and pair your laptop with a separate mouse and an external keyboard, such as a [silent wireless keyboard](/blog/silent-wireless-keyboard-and-adjustable-dpi-mouse-for-shared-workspaces-1788814273162/). This keeps your shoulders relaxed, elbows at 90 degrees, and neck aligned.
 
 [Check current price](https://amzn.to/48Uka7O)
 
@@ -87,7 +87,7 @@ Second, the hinges require significant physical force to adjust. You must use tw
 Integrating an elevated laptop stand into your workspace requires a few deliberate touches to maximize usable surface area:
 
 1. **Reclaim Desk Space:** The raised baseplate clears space beneath your laptop. Use this area to park your wireless keyboard when not in use, stash a notebook, or tuck away small office desk accessories.
-2. **Surface Protection:** The rotating base features rubberized feet, but placing the entire unit on a dedicated [waterproof desk pad protector](/blog/the-best-waterproof-desk-pad-protector-for-your-home-office/) provides smooth rotation and protects your desktop from accidental scuffs.
+2. **Surface Protection:** The rotating base features rubberized feet, but placing the entire unit on a dedicated [waterproof desk pad protector](/blog/the-best-waterproof-desk-pad-protector-for-your-home-office-1788608149982/) provides smooth rotation and protects your desktop from accidental scuffs.
 3. **Cable Anchoring:** Because the stand swivels 360 degrees, leave roughly four to six inches of slack on your charging and display cables so they do not pull tight or dislodge ports when you spin the laptop to share your screen.
 
 Matching your MacBook with an aluminum stand designed for height range, joint rigidity, and heat management solves neck fatigue and protects your hardware over years of daily work.

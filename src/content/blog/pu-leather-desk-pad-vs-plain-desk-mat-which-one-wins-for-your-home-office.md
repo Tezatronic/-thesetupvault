@@ -58,8 +58,8 @@ If you’re still debating, consider how often you spill drinks, how much you mo
 
 ## Related Reading
 
-- Learn how a waterproof desk pad can protect your surface in our guide to the [best waterproof desk pad protector](/blog/the-best-waterproof-desk-pad-protector-for-your-home-office/).
-- If you’re also looking for a mouse pad that charges wirelessly, check out the [buying guide for wireless charging mouse pads](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/).
+- Learn how a waterproof desk pad can protect your surface in our guide to the [best waterproof desk pad protector](/blog/the-best-waterproof-desk-pad-protector-for-your-home-office-1788608149982/).
+- If you’re also looking for a mouse pad that charges wirelessly, check out the [buying guide for wireless charging mouse pads](/blog/buying-guide-choosing-the-best-wireless-charging-mouse-pad-for-your-desk-setup/).
 
 ---
 

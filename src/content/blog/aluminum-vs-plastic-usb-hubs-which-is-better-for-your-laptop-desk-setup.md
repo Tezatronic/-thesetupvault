@@ -55,8 +55,8 @@ One caveat: the two PD charging ports are optimized for phones and tablets. They
 
 ### How to integrate an aluminum hub into your desk setup
 
-1. **Place it near your laptop stand** – Pair the hub with a sturdy laptop stand (see our [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-practical-setup-guide/)). The angled design lines up nicely with the stand’s rear, keeping cables tidy.  
-2. **Use cable ties or a reusable cable‑management kit** – A 3.3‑foot cable can be routed along the back edge of the desk, then secured with a velcro tie to avoid a messy spaghetti look. Our guide on [The Best Reusable Cable Ties for Desk Cable Management](/blog/the-best-reusable-cable-ties-for-desk-cable-management-a-practical-buying-guide/) walks you through the best options.  
+1. **Place it near your laptop stand** – Pair the hub with a sturdy laptop stand (see our [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-and-setup-guide/)). The angled design lines up nicely with the stand’s rear, keeping cables tidy.  
+2. **Use cable ties or a reusable cable‑management kit** – A 3.3‑foot cable can be routed along the back edge of the desk, then secured with a velcro tie to avoid a messy spaghetti look. Our guide on [The Best Reusable Cable Ties for Desk Cable Management](/blog/best-reusable-cable-ties-for-desk-cable-management-a-practical-buying-guide-1789141223311/) walks you through the best options.  
 3. **Leave the hub on a metal‑friendly surface** – Aluminum conducts heat, so placing the hub on a metal desk or a small metal pad can help dissipate any residual warmth during long data transfers.  
 4. **Reserve the PD ports for mobile devices** – Plug your phone or tablet into the USB‑C PD ports while you keep the laptop charger separate. This avoids overloading the hub’s power circuitry.
 

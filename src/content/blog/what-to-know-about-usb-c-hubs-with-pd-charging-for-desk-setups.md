@@ -35,7 +35,7 @@ Not all USB ports handle the same data rates. USB 3.0 (also labeled USB 3.1 Gen 
 However, if you move video footage, large photo libraries, or virtual machine images to external drives, look for USB 3.2 Gen 2 ports that support transfer speeds up to 10Gbps. Having a mix of both port generations ensures you do not waste a high-bandwidth 10Gbps connection on a simple peripheral like a [solid 1080p webcam](/blog/best-1080p-webcam-with-microphone-for-zoom-and-teams-calls-buying-guide/), while still keeping high-speed lanes open for external NVMe enclosures.
 
 ### 3. Port Geometry and Desk Ergonomics
-Port orientation determines how messy your workstation looks. Flat dongles that sit loosely behind a computer tend to slide around whenever a thick cable is attached. Desktop hubs designed with weighted bases or angled front faces allow you to insert flash drives and charging cables with one hand, without lifting or shifting the entire hub across your desk pad. Managing the resulting bundle with [reusable cable ties for desk cable management](/blog/the-best-reusable-cable-ties-for-desk-cable-management-a-practical-buying-guide/) keeps your workspace clean.
+Port orientation determines how messy your workstation looks. Flat dongles that sit loosely behind a computer tend to slide around whenever a thick cable is attached. Desktop hubs designed with weighted bases or angled front faces allow you to insert flash drives and charging cables with one hand, without lifting or shifting the entire hub across your desk pad. Managing the resulting bundle with [reusable cable ties for desk cable management](/blog/best-reusable-cable-ties-for-desk-cable-management-a-practical-buying-guide-1789141223311/) keeps your workspace clean.
 
 [Check current price](https://amzn.to/4eCGsyS)
 
@@ -66,7 +66,7 @@ Rather than trying to act as a laptop docking station with display outputs, this
 
 The hub includes a dedicated 65W (20V/3.25A) power adapter in the box, ensuring that the 7 data ports and the 2 PD charging ports receive reliable, consistent electrical current. Because the chassis is cast in an aluminum unibody with a 32-degree angled ergonomic design, plugging in thumb drives and charging cables from a seated position feels natural. The ports face directly toward you rather than pointing flat against the desk surface.
 
-A 3.3-foot host cable provides plenty of slack to route connections neatly around a monitor arm or tuck behind a [laptop stand for MacBook](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-practical-setup-guide/), leaving the hub right where your hands naturally reach. 
+A 3.3-foot host cable provides plenty of slack to route connections neatly around a monitor arm or tuck behind a [laptop stand for MacBook](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-and-setup-guide/), leaving the hub right where your hands naturally reach. 
 
 [Check current price](https://amzn.to/4eCGsyS)
 

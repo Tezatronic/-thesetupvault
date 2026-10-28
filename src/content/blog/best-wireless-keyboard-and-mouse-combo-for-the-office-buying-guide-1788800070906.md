@@ -78,11 +78,11 @@ No product is perfect, and it’s worth noting a couple of limitations before yo
 3. **Adjust DPI** on the mouse by pressing the DPI button until you reach the desired sensitivity.
 4. **Customize shortcut keys** through your operating system’s keyboard settings if you want to reassign any of the multimedia functions.
 
-If you’re already using a wireless charging mouse pad, you can read more about integrating peripherals in our guide on [wireless charging mouse pads for a seamless desk setup](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/).
+If you’re already using a wireless charging mouse pad, you can read more about integrating peripherals in our guide on [wireless charging mouse pads for a seamless desk setup](/blog/buying-guide-choosing-the-best-wireless-charging-mouse-pad-for-your-desk-setup/).
 
 ## When Silence Really Matters
 
-Even though the RECCAZR combo is quiet, you might still want to consider additional sound‑dampening strategies for a truly silent workspace. Our article on [why a silent wireless keyboard belongs in your shared workspace](/blog/why-a-silent-wireless-keyboard-belongs-in-your-shared-workspace/) dives deeper into the benefits of low‑noise peripherals and how they improve collaboration.
+Even though the RECCAZR combo is quiet, you might still want to consider additional sound‑dampening strategies for a truly silent workspace. Our article on [why a silent wireless keyboard belongs in your shared workspace](/blog/silent-wireless-keyboard-and-adjustable-dpi-mouse-for-shared-workspaces-1788814273162/) dives deeper into the benefits of low‑noise peripherals and how they improve collaboration.
 
 ## Bottom Line
 

@@ -92,5 +92,5 @@ If you’re ready to upgrade your workstation, grab the stand now and pair it wi
 
 **Further Reading**
 
-- Learn how to pair your new stand with the right accessories in our guide on [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-practical-setup-guide/).
-- Want a seamless desk surface? Check out the [Your Buying Guide to the Best Wireless Charging Mouse Pad for a Seamless Desk Setup](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/).
+- Learn how to pair your new stand with the right accessories in our guide on [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-and-setup-guide/).
+- Want a seamless desk surface? Check out the [Your Buying Guide to the Best Wireless Charging Mouse Pad for a Seamless Desk Setup](/blog/buying-guide-choosing-the-best-wireless-charging-mouse-pad-for-your-desk-setup/).

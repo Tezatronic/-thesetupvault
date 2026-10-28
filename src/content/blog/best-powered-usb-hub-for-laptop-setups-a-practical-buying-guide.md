@@ -78,7 +78,7 @@ Overall, the intpw hub checks every box for a laptop‑centric desk: power, port
 2. **Connect the power brick to a nearby outlet** – Use a short extension cord if your power strip is a few feet away; the 3.3‑foot cable gives you room to maneuver.
 3. **Route high‑speed devices to the USB‑C/USB‑A 3.2 ports** – Keep your external SSD, webcam, and any other bandwidth‑hungry gear on these ports for the best performance.
 4. **Reserve the PD ports for phones and tablets** – Plug your iPhone, Android phone, or iPad into these ports to keep them charged while you work.
-5. **Cable management** – Pair the hub with reusable cable ties ([The Best Reusable Cable Ties for Desk Cable Management: A Practical Buying Guide](/blog/the-best-reusable-cable-ties-for-desk-cable-management-a-practical-buying-guide/)) to keep the power cord and peripheral cables neat.
+5. **Cable management** – Pair the hub with reusable cable ties ([The Best Reusable Cable Ties for Desk Cable Management: A Practical Buying Guide](/blog/best-reusable-cable-ties-for-desk-cable-management-a-practical-buying-guide-1789141223311/)) to keep the power cord and peripheral cables neat.
 
 ## Final Thoughts
 
@@ -93,4 +93,4 @@ If you’re looking for a single hub that handles everything from a fast externa
 **Related reads**
 
 - Learn more about the differences between USB‑C hubs with PD charging in our guide on [What to Know About USB‑C Multiport Hubs with PD Charging](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/).  
-- If you’re also shopping for a laptop stand to complement your new hub, check out the [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-practical-setup-guide/).
+- If you’re also shopping for a laptop stand to complement your new hub, check out the [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-and-setup-guide/).

@@ -43,7 +43,7 @@ The clamp is sturdy enough to hold the lamp on desks up to 2.36 inches thick, wh
 Because it’s USB powered, the lamp stays out of the way of power‑strip chaos, and the cable can be routed neatly along the edge of the desk. The gooseneck itself is flexible yet holds its position, so you can angle the light exactly where you need it—over a keyboard, a notebook, or a drawing pad.
 
 If you’ve already read our piece on squeezing a lamp onto a tiny desk, you’ll see why the Airlonv’s clamp and slim profile are a natural upgrade:  
-[USB Desk Lamp Setup for Tiny Workspaces: How the Airlonv Gooseneck Lamp Solves the Space Crunch](/blog/usb-desk-lamp-setup-for-tiny-workspaces-how-the-airlonv-gooseneck-lamp-solves-the-space-crunch/)
+[USB Desk Lamp Setup for Tiny Workspaces: How the Airlonv Gooseneck Lamp Solves the Space Crunch](/blog/usb-desk-lamp-setups-for-small-desks-how-a-gooseneck-clamp-lamp-saves-space/)
 
 Overall, the Airlonv offers the most versatile lighting experience for a typical home‑office setup without demanding extra wall outlets or complicated controls.
 
@@ -65,7 +65,7 @@ These limitations are minor compared to the flexibility you gain, but they’re 
 When the choice comes down to dimmable versus fixed‑brightness, the ability to fine‑tune both brightness and color temperature makes a dimmable gooseneck lamp the smarter investment for a home office. The Airlonv LED Desk Lamp delivers that control in a compact, USB‑powered package that fits most desks thanks to its sturdy clamp and 17‑inch light bar. While you’ll need a USB source and a moment to set your preferred level, the ergonomic benefits—reduced eye strain, better focus, and energy savings—far outweigh the small inconveniences.
 
 For anyone already exploring desk‑lamp setups for limited spaces, our guide on maximizing small‑desk lighting also highlights how a gooseneck lamp can free up surface area:  
-[The Best USB Desk Lamp Setups for Small Desks: Maximize Space and Light](/blog/the-best-usb-desk-lamp-setups-for-small-desks-maximize-space-and-light/)
+[The Best USB Desk Lamp Setups for Small Desks: Maximize Space and Light](/blog/usb-desk-lamp-setups-for-small-desks-how-a-gooseneck-clamp-lamp-saves-space/)
 
 If you’re ready to upgrade your lighting without cluttering your workspace, the Airlonv offers the precise, adaptable illumination that modern work demands.  
 [Check current price](https://amzn.to/4u8K3J8)

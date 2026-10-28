@@ -81,5 +81,5 @@ If those conditions line up with your workflow, the pad can become the centerpie
 
 **Further Reading**
 
-* [Your Buying Guide to the Best Wireless Charging Mouse Pad for a Seamless Desk Setup](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/) – A deeper dive into what to look for when shopping for wireless pads.  
+* [Your Buying Guide to the Best Wireless Charging Mouse Pad for a Seamless Desk Setup](/blog/buying-guide-choosing-the-best-wireless-charging-mouse-pad-for-your-desk-setup/) – A deeper dive into what to look for when shopping for wireless pads.  
 * [What to Know About USB‑C Multiport Hubs with PD Charging](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/) – Helps you choose the right adapter to get the full 15 W charging speed.

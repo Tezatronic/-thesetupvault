@@ -39,7 +39,7 @@ A minimalist desk is more than just a tidy surface; it’s a curated set of tool
 
 - **Cable Management** – Keep cords hidden with zip‑tie straps or a cable tray. See our guide on [how to organize desk cables with adjustable cord straps](/blog/how-to-organize-desk-cables-with-adjustable-cord-straps-1789157258425/).  
 - **Laptop Stand** – Elevate your laptop on a sleek stand to free up desk real estate. Our article on [what to look for in a laptop stand for MacBook](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-and-setup-guide/) offers a quick checklist.  
-- **Desk Pad** – A low‑profile, waterproof desk pad protects the surface while adding a subtle texture. Learn more in our review of the [best waterproof desk pad protector](/blog/the-best-waterproof-desk-pad-protector-for-your-home-office/).  
+- **Desk Pad** – A low‑profile, waterproof desk pad protects the surface while adding a subtle texture. Learn more in our review of the [best waterproof desk pad protector](/blog/the-best-waterproof-desk-pad-protector-for-your-home-office-1788608149982/).  
 
 When each element follows the same visual language—clean lines, muted colors, and functional simplicity—the mesh organizer feels like a natural extension rather than an afterthought.
 

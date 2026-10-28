@@ -64,7 +64,7 @@ When you line up these criteria, you’ll quickly see why the Airlonv model chec
 
 From a personal standpoint, the gooseneck’s flexibility lets me swing the light over a stack of reference books without moving the lamp’s base. The dimming feels buttery smooth; I can dial it down to a barely‑there glow for late‑night reading, which saves my eyes and helps me wind down.
 
-If you’re already browsing the Airlonv lamp for its space‑saving qualities, you might also enjoy the article on how it solves tiny‑desk challenges: [USB Desk Lamp Setup for Tiny Workspaces: How the Airlonv Gooseneck Lamp Solves the Space Crunch](/blog/usb-desk-lamp-setup-for-tiny-workspaces-how-the-airlonv-gooseneck-lamp-solves-the-space-crunch/).
+If you’re already browsing the Airlonv lamp for its space‑saving qualities, you might also enjoy the article on how it solves tiny‑desk challenges: [USB Desk Lamp Setup for Tiny Workspaces: How the Airlonv Gooseneck Lamp Solves the Space Crunch](/blog/usb-desk-lamp-setups-for-small-desks-how-a-gooseneck-clamp-lamp-saves-space/).
 
 [Check current price](https://amzn.to/4u8K3J8)
 
@@ -85,8 +85,8 @@ These points are worth checking against your own setup before you buy.
 
 A good light is only part of a productive environment. Consider these complementary pieces:
 
-- **Wireless Charging Mouse Pad** – Keeps your mouse powered without extra cables. See our guide: [Your Buying Guide to the Best Wireless Charging Mouse Pad for a Seamless Desk Setup](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/).
-- **Ergonomic Laptop Stand** – Elevates the screen to eye level, reducing neck strain. Our practical guide can help you choose the right one: [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-practical-setup-guide/).
+- **Wireless Charging Mouse Pad** – Keeps your mouse powered without extra cables. See our guide: [Your Buying Guide to the Best Wireless Charging Mouse Pad for a Seamless Desk Setup](/blog/buying-guide-choosing-the-best-wireless-charging-mouse-pad-for-your-desk-setup/).
+- **Ergonomic Laptop Stand** – Elevates the screen to eye level, reducing neck strain. Our practical guide can help you choose the right one: [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-and-setup-guide/).
 
 Together with the Airlonv lamp, these accessories create a balanced lighting and ergonomics combo that supports long study sessions.
 

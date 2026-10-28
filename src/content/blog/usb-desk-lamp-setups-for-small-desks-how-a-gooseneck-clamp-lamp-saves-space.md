@@ -27,7 +27,7 @@ A range from 2700 K (warm) to 6500 K (daylight) lets you match the lighting 
 ### 5. Long‑lasting LEDs  
 With 100 LED beads rated for a 60,000‑hour lifespan, the lamp will outlive most laptops and monitors, so you won’t be swapping bulbs every few years.
 
-If you’re already exploring other USB‑centric accessories, you might find our guide to the **[best wireless charging mouse pad](/blog/your-buying-guide-to-the-best-wireless-charging-mouse-pad-for-a-seamless-desk-setup/)** useful, as it pairs nicely with a USB‑powered lamp on a tight desk.
+If you’re already exploring other USB‑centric accessories, you might find our guide to the **[best wireless charging mouse pad](/blog/buying-guide-choosing-the-best-wireless-charging-mouse-pad-for-your-desk-setup/)** useful, as it pairs nicely with a USB‑powered lamp on a tight desk.
 
 ## Key Factors to Evaluate Before Buying
 
