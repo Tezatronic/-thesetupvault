@@ -5,7 +5,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import ChecklistCapture from '../components/ChecklistCapture.astro';
 import { productForSlug } from '../data/products';
 
 type Props = CollectionEntry<'blog'>['data'] & {
@@ -182,9 +181,6 @@ const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : un
 						}
 					<hr />
 				</div>
-				<p style="background: #f4f4f8; border-left: 4px solid var(--accent); padding: 0.75em 1em; font-size: 0.85em; color: rgb(var(--gray-dark));">
-					<strong>Disclosure:</strong> This post contains affiliate links. If you make a purchase through one of these links, we may earn a commission at no additional cost to you.
-				</p>
 				<slot />
 				{ownProduct && (
 					<aside class="own-product">
@@ -201,7 +197,6 @@ const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : un
 						</ul>
 					</nav>
 				)}
-				<ChecklistCapture />
 				</div>
 			</article>
 		</main>

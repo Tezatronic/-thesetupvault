@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 import fs from 'node:fs';
 import path from 'node:path';
+import rehypeInlineChecklist from './src/plugins/rehype-inline-checklist.mjs';
 
 const SITE = 'https://thesetupvault.vercel.app';
 
@@ -39,7 +40,7 @@ if (fs.existsSync(blogDir)) {
 // https://astro.build/config
 export default defineConfig({
 	site: SITE,
-	markdown: { rehypePlugins: [rehypeSponsoredAmazonLinks] },
+	markdown: { rehypePlugins: [rehypeSponsoredAmazonLinks, rehypeInlineChecklist] },
 	integrations: [
 		mdx(),
 		sitemap({
