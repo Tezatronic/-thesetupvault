@@ -63,7 +63,7 @@ From a practical standpoint, the lamp’s compact footprint and flexible arm mak
 - **USB power ceiling** – While 10 W is sufficient for most tasks, the lamp can’t reach the same peak brightness as a high‑wattage plug‑in lamp. In a daylight‑filled room you might still need ambient lighting.  
 - **No built‑in USB hub** – The lamp supplies power but doesn’t provide extra USB ports, so you’ll still need a separate hub if you want to charge multiple devices.
 
-If you need a hub, our article on **[USB‑C multiport hubs with PD charging](/blog/what-to-know-about-usb-c-multiport-hubs-with-pd-charging/)** walks through the best options for a tidy desk.
+If you need a hub, our article on **[USB‑C multiport hubs with PD charging](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/)** walks through the best options for a tidy desk.
 
 [Check current price](https://amzn.to/4u8K3J8)
 

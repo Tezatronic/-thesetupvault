@@ -92,5 +92,5 @@ If you’re looking for a single hub that handles everything from a fast externa
 
 **Related reads**
 
-- Learn more about the differences between USB‑C hubs with PD charging in our guide on [What to Know About USB‑C Multiport Hubs with PD Charging](/blog/what-to-know-about-usb-c-multiport-hubs-with-pd-charging/).  
+- Learn more about the differences between USB‑C hubs with PD charging in our guide on [What to Know About USB‑C Multiport Hubs with PD Charging](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/).  
 - If you’re also shopping for a laptop stand to complement your new hub, check out the [What to Look For in a Laptop Stand for MacBook: Key Features & Practical Setup Guide](/blog/what-to-look-for-in-a-laptop-stand-for-macbook-key-features-practical-setup-guide/).

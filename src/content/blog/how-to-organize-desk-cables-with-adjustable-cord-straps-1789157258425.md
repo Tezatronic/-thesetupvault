@@ -14,7 +14,7 @@ Managing desk wiring comes down to establishing clean cable paths, eliminating e
 
 Desk setups are rarely static. You swap a mouse, replace an audio interface, or reroute a display line when shifting screens. Traditional plastic zip ties lock your cables into a fixed harness. The moment you need to replace a single cord, you have to squeeze flush cutters into tight spaces behind your desk, risking accidental nicks to your wires.
 
-Solid neoprene or split-weave cable sleeves offer a clean, uniform look, but they make mid-run branch-offs frustrating. If three cables run to a [USB-C multiport hub with PD charging](/blog/what-to-know-about-usb-c-multiport-hubs-with-pd-charging/) while two continue to your wall outlet, threading those split paths through a sleeve requires cutting holes or leaving awkward bulges. 
+Solid neoprene or split-weave cable sleeves offer a clean, uniform look, but they make mid-run branch-offs frustrating. If three cables run to a [USB-C multiport hub with PD charging](/blog/what-to-know-about-usb-c-hubs-with-pd-charging-for-desk-setups/) while two continue to your wall outlet, threading those split paths through a sleeve requires cutting holes or leaving awkward bulges. 
 
 Using dedicated adjustable cord straps gives you a modular system. You can open a single strap, pull out a dead charging line, slip in a replacement, and press the hook-and-loop fabric closed without disturbing the rest of the run. For a broader comparison of tie styles, you can read our guide to [the best reusable cable ties for desk cable management](/blog/the-best-reusable-cable-ties-for-desk-cable-management-a-practical-buying-guide/).
 
