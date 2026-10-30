@@ -273,6 +273,18 @@
         "improve webcam video in dark rooms"
       ],
       "rationale": "Focuses on low‑light video quality and lighting solutions, a use‑case not covered by existing buying‑guide, FOV, or docked‑laptop articles."
+    },
+    {
+      "angle": "streaming-content-creation-guide",
+      "focus": "A step‑by‑step guide to configuring the EMEET C960 for high‑quality live streaming and recorded video on platforms like Twitch, YouTube, and TikTok.",
+      "keywords": [
+        "webcam for streaming",
+        "EMEET C960 OBS setup",
+        "best webcam for YouTube videos",
+        "webcam for TikTok live",
+        "streaming webcam guide"
+      ],
+      "rationale": "Targets creators looking to stream or record video, a use case not covered by existing call‑oriented articles."
     }
   ],
   "keyboard-mouse-combo": [
