@@ -47,6 +47,15 @@ const topicCounts = TOPICS.map((t) => ({
 				text-decoration: none;
 				color: rgb(var(--black));
 			}
+			.planner-note {
+				margin: 0 0 2em;
+				font-size: 0.95em;
+				color: rgb(var(--gray-dark));
+			}
+			.planner-note a {
+				font-weight: 700;
+				white-space: nowrap;
+			}
 			.topics a:hover {
 				border-color: var(--accent);
 				color: var(--accent);
@@ -129,6 +138,10 @@ const topicCounts = TOPICS.map((t) => ({
 				{topicCounts.map((t) => <a href={`/blog/topic/${t.key}/`}>{t.label}<span>{t.count}</span></a>)}
 			</nav>
 			<ChecklistCapture />
+			<p class="planner-note">
+				Want a plan instead of more guides? The Desk Setup Planner helps you decide what is worth buying before you spend.
+				<a href="/go/desk-planner/">See the planner →</a>
+			</p>
 			<section>
 				<ul>
 					{

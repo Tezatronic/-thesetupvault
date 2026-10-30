@@ -5,7 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { productForSlug } from '../data/products';
+import { PRODUCTS, productForSlug } from '../data/products';
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	slug?: string;
@@ -48,8 +48,10 @@ const schema = isGuide
 		]
 	: undefined;
 
-// One matching owned-product block per guide, unless the guide already links to one.
-const ownProduct = isGuide && slug && !hasProductCta ? productForSlug(slug) : undefined;
+// One owned-product block per guide, unless the guide already links to one.
+// Every guide gets a product box: the closest match, else the Desk Setup Planner
+// (its "decide what's worth buying" angle fits accessory guides too).
+const ownProduct = isGuide && slug && !hasProductCta ? (productForSlug(slug) ?? PRODUCTS[1]) : undefined;
 ---
 
 <html lang="en">
