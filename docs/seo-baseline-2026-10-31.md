@@ -51,3 +51,7 @@ Titles shortened to 60 characters or fewer and descriptions tightened on the 11 
 3. Note that early data is volatile for a new site: judge by trend across the 11 pages, not one page.
 4. Then propose the next batch of title rewrites (pages with real impressions at positions 4 to 20 and 0 clicks), and the new search-intent articles to write: a dedicated LED desk lamp setup guide (the query "led desk lamp setup guide" had 267 impressions and only the topic hub ranked), then USB hub and wireless charging long-tail topics.
 5. Also update the writer (scripts/generate-post.mjs) so new articles start from a real search query, with a title of 60 characters or fewer and a direct answer in the first paragraph, if the owner agrees.
+
+## Raw baseline data (full Search Console export, Oct 31, 2026)
+Saved in `docs/baseline-2026-10-31/`: Queries.csv, Pages.csv, Chart.csv, Countries.csv, Devices.csv and the others from the export.
+Use these to compare every page and query, not just the 11 above. Columns: clicks, impressions, CTR, position.
