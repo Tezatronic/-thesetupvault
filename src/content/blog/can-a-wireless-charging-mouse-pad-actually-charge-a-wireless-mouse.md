@@ -1,6 +1,6 @@
 ---
-title: "Can a Wireless Charging Mouse Pad Actually Charge a Wireless Mouse?"
-description: "Find out whether a wireless charging desk mat can charge your wireless mouse or just your phone, plus how Qi compatibility works across desk peripherals."
+title: "Can a Wireless Charging Mouse Pad Charge a Wireless Mouse?"
+description: "Can a wireless charging mouse pad charge your wireless mouse, or only your phone? How Qi charging works with desk accessories."
 pubDate: 2026-09-26
 ---
 

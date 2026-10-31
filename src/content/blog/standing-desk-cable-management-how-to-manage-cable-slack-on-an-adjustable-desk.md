@@ -1,6 +1,6 @@
 ---
-title: "Standing Desk Cable Management: How to Manage Cable Slack on an Adjustable Desk"
-description: "Master standing desk cable management with practical techniques for managing cable slack, securing cord bundles, and keeping your motorized desk safe."
+title: "Standing Desk Cable Management: Handle Cable Slack"
+description: "How to manage cable slack on a standing desk so cords don't pull, snag or pinch when the desk moves up and down."
 pubDate: 2026-09-12
 ---
 

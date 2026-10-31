@@ -1,6 +1,6 @@
 ---
-title: "USB Hub Troubleshooting: Fix Connectivity, Speed, and Power Issues in Your Home Office"
-description: "Step‑by‑step guide to diagnose and resolve common USB hub problems, with a focus on the intpw 9‑Port USB 3.2 Hub. Learn how to fix hub not recognized, slow transfers, and power hiccups."
+title: "USB Hub Not Working? Fix Connection, Speed and Power Issues"
+description: "USB hub not recognized, slow transfers or power drops? Step-by-step fixes for the most common USB hub problems at your desk."
 pubDate: 2026-09-25
 ---
 

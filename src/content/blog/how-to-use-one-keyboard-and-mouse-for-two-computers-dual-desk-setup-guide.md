@@ -1,6 +1,6 @@
 ---
-title: "How to Use One Keyboard and Mouse for Two Computers: Dual-Desk Setup Guide"
-description: "Learn how to set up a dual computer wireless keyboard and mouse system to switch cleanly between your work laptop and personal desktop without desktop clutter."
+title: "One Keyboard and Mouse for Two Computers: Setup Guide"
+description: "How to use one keyboard and mouse with two computers, and switch between a work laptop and a personal desktop without cable clutter."
 pubDate: 2026-09-26
 ---
 
