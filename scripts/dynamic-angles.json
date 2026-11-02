@@ -342,6 +342,16 @@
         "wash mouse pad with built in charger"
       ],
       "rationale": "Focuses on post-purchase maintenance and electronic safety rather than product selection, form-factor comparisons, or peripheral compatibility."
+    },
+    {
+      "angle": "power-source-setup-guide",
+      "focus": "A technical setup and troubleshooting guide explaining the exact wall adapter wattage and USB standard needed to power a wireless charging desk pad without slow charging or disconnects.",
+      "keywords": [
+        "wireless charging mouse pad power supply",
+        "how to power wireless charging desk pad",
+        "wireless charging mouse pad charging slowly"
+      ],
+      "rationale": "Targets post-purchase technical setup intent regarding electrical requirements rather than buying comparisons, peripheral compatibility, or surface cleaning."
     }
   ],
   "mini-desktop-fan": [
