@@ -308,6 +308,18 @@
         "office ergonomics keyboard mouse"
       ],
       "rationale": "Targets health‑focused ergonomics search intent, which isn’t covered by the existing buying, silent, mechanical, or multi‑device articles."
+    },
+    {
+      "angle": "secure-wireless-keyboard-mouse-combo",
+      "focus": "A guide to selecting and configuring a wireless keyboard and mouse combo that safeguards your data against signal interception and keystroke‑logging attacks.",
+      "keywords": [
+        "wireless keyboard security",
+        "encrypted Bluetooth keyboard",
+        "secure wireless mouse",
+        "keyboard mouse hacking",
+        "protect wireless peripherals"
+      ],
+      "rationale": "Focuses on privacy and security, a search intent not covered by existing ergonomic, buying‑guide, or multi‑device articles."
     }
   ],
   "wireless-charger-pad": [
