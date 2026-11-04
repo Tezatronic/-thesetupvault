@@ -374,6 +374,18 @@
         "prevent fan noise on mic work from home"
       ],
       "rationale": "Targets teleconferencing audio interference and mic placement rather than ambient room cooling, laptop thermals, or shared-office etiquette."
+    },
+    {
+      "angle": "travel-friendly-desk-fan-for-remote-work",
+      "focus": "A guide on using a rechargeable USB mini desk fan to stay cool while working from coffee shops, coworking spaces, or while traveling, emphasizing portability, battery life, and setup tips.",
+      "keywords": [
+        "portable USB fan travel",
+        "compact desk fan remote work",
+        "battery powered fan coworking",
+        "travel office accessories",
+        "mobile workstation cooling"
+      ],
+      "rationale": "Focuses on mobility and travel scenarios, a search intent not covered by existing buying guides or office‑only use cases."
     }
   ]
 }
