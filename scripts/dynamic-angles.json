@@ -81,6 +81,18 @@
         "LED lamp for multiple monitors"
       ],
       "rationale": "Targets the specific need of minimizing monitor glare, a search intent not covered by existing guides"
+    },
+    {
+      "angle": "creative-task-lighting",
+      "focus": "A step‑by‑step guide on configuring a gooseneck LED desk lamp to provide optimal, shadow‑free illumination for drawing, design, crafting, and other creative work at a home office desk.",
+      "keywords": [
+        "desk lamp for drawing",
+        "LED lamp for artists",
+        "task lighting for crafts",
+        "creative workspace lighting",
+        "gooseneck lamp art"
+      ],
+      "rationale": "Focuses on lighting needs of artists and makers, a use‑case not covered by existing reading, video‑call, or ergonomics articles."
     }
   ],
   "cable-organizer": [
