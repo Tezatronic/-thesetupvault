@@ -129,6 +129,17 @@
         "improve PC cooling"
       ],
       "rationale": "Focuses on thermal performance and airflow, a search intent not covered by existing guides."
+    },
+    {
+      "angle": "emi-audio-cable-isolation",
+      "focus": "A practical guide on using Nettbe reusable cable ties to isolate AC power cords from sensitive microphone, speaker, and video cables to eliminate electromagnetic interference (EMI) and background audio hum.",
+      "keywords": [
+        "separate power and audio cables",
+        "eliminate desk mic hum",
+        "cable management audio interference",
+        "desk emi cable routing"
+      ],
+      "rationale": "Targets signal integrity and audio-visual troubleshooting rather than aesthetics, airflow, mobility, or physical desk ergonomics."
     }
   ],
   "monitor-stand": [
