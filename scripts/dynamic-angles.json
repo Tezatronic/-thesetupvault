@@ -176,6 +176,18 @@
         "hollow core desk monitor mount"
       ],
       "rationale": "Targets desktop structural safety and surface material constraints rather than ergonomics, storage, or compact-space decluttering."
+    },
+    {
+      "angle": "cooling-boost-monitor-stand",
+      "focus": "How the WALI monitor stand’s ventilated design improves airflow and reduces heat for laptops, mini‑PCs, and peripherals in a home‑office setup",
+      "keywords": [
+        "monitor stand cooling",
+        "laptop ventilation stand",
+        "mini pc airflow",
+        "desk heat dissipation",
+        "monitor riser heat management"
+      ],
+      "rationale": "Focuses on thermal management, a search intent not covered by existing ergonomic, space‑saving, or storage angles"
     }
   ],
   "desk-organizer": [
