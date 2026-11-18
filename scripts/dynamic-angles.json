@@ -271,6 +271,16 @@
         "silent home office"
       ],
       "rationale": "Targets acoustic/quiet‑office concerns, a search intent not covered by existing ergonomic, sizing, or care articles"
+    },
+    {
+      "angle": "writing-blotter-desk-pad",
+      "focus": "How a firm PU leather desk pad functions as an executive desk blotter to provide a smooth, dent-free writing surface for journaling, sketching, and paperwork.",
+      "keywords": [
+        "desk blotter for writing",
+        "desk pad for paperwork",
+        "writing mat for desk"
+      ],
+      "rationale": "Targets an analog paperwork and penmanship search intent rather than computer peripheral use, acoustics, or spill protection."
     }
   ],
   "usb-hub": [
