@@ -317,6 +317,17 @@
         "usb hub data archiving"
       ],
       "rationale": "Focuses on backup workflow and data management, a search intent not covered by existing guides"
+    },
+    {
+      "angle": "usb-bandwidth-management-optimizing-9-port-hub-performance",
+      "focus": "A guide on how to allocate and prioritize devices on the 9‑Port USB 3.2 hub to prevent bandwidth bottlenecks and keep high‑speed peripherals running at peak speed.",
+      "keywords": [
+        "USB bandwidth management",
+        "USB hub performance bottleneck",
+        "optimal USB device placement",
+        "USB 3.2 hub speed"
+      ],
+      "rationale": "Focuses on bandwidth optimization, a different intent from buying, troubleshooting, or use‑case guides already covered."
     }
   ],
   "webcam": [
