@@ -410,6 +410,18 @@
         "protect wireless peripherals"
       ],
       "rationale": "Focuses on privacy and security, a search intent not covered by existing ergonomic, buying‑guide, or multi‑device articles."
+    },
+    {
+      "angle": "travel-friendly-wireless-keyboard-mouse-combo",
+      "focus": "A guide to choosing compact, lightweight, rechargeable wireless keyboard and mouse combos perfect for remote workers, digital nomads, and frequent travelers.",
+      "keywords": [
+        "portable wireless keyboard mouse combo",
+        "travel keyboard mouse",
+        "compact wireless keyboard",
+        "lightweight mouse for travel",
+        "USB‑C rechargeable keyboard mouse"
+      ],
+      "rationale": "Targets the travel/remote‑work use‑case, a search intent not covered by existing buying, ergonomic, security, or multi‑device guides."
     }
   ],
   "wireless-charger-pad": [
